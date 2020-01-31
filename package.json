@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node ./src/server.js",
     "lint": "eslint ./src/*.js --quiet",
     "test": "npm run lint"
   },
