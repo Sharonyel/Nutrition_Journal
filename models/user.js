@@ -29,6 +29,7 @@ module.exports = function (sequelize, DataTypes) {
         password: {
             type: DataTypes.STRING,
             allowNull: false,
+            unique: true,
             validate: {
                 len: [8, 225]
             }
@@ -63,18 +64,18 @@ module.exports = function (sequelize, DataTypes) {
         },
         weight_goal: {
             type: DataTypes.INTEGER,
-            allowNull: false,
-            validate: {
-                len: [1, 3]
-            }
-        },
-        avatar: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
             validate: {
                 len: [1, 3]
             }
         }
+        // ,
+        // avatar: {
+        //     type: DataTypes.INTEGER,
+        //     allowNull: false,
+        //     validate: {
+        //         len: [1, 3]
+        //     }
+        // }
     }
         // ,{
         //     classMethods: {
