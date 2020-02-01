@@ -1,43 +1,46 @@
 $(document).ready(function () {
 
-  var username = $(".cuserName").val().trim();
-  var firstname = $(".cfirstName").val().trim();
-  var lastname = $(".clastName").val().trim();
-  var password = $(".cpassWord").val().trim();
-  var age = $(".cAge").val().trim();
-  var weight = $(".cWeight").val().trim();
-  var height = $(".cHeight").val().trim();
-  var gender = $(".cGender").attr("data-name");
+  var username = $(".cuserName")
+  var firstname = $(".cfirstName")
+  var lastname = $(".clastName")
+  var password = $(".cpassWord")
+  var age = $(".cAge")
+  var weight = $(".cWeight")
+  var height = $(".cHeight")
+  var gender = $(".genderOption")
 
   $(document).on("click", "#user-signup", handleUserSignUp);
-  $(document).on("click", "#user-signin", handleUserSignIn);
-      
+  // $(document).on("click", "#user-signin", handleUserSignIn);
+
+
+
+
   function handleUserSignUp(event) {
+    console.log("clicked")
     event.preventDefault();
     // Don't do anything if the name fields hasn't been filled out
-    if (!username) {
-      return;
-    }
+    
     // 
 
-enterUser({
-  user_name: username,
-  first_name: firstname,
-  last_name: lastname,
-  password: password,
-  age: age,
-  weight: weight,
-  height: height,
-  gender: gender
-  
-});
-}
+    enterUser({
+      user_name: username.val().trim(),
+      first_name: firstname.val().trim(),
+      last_name: lastname.val().trim(),
+      password: password.val().trim(),
+      age: age.val().trim(),
+      weight: weight.val().trim(),
+      height: height.val().trim(),
+      gender: gender.attr("data-name")
 
-// A function for creating an author. Calls getAuthors upon completion
-function enterUser(userData) {
-$.post("/api/users", userData)
+    });
+  }
 
-}
+  // A function for creating an author. Calls getAuthors upon completion
+  function enterUser(userData) {
+    console.log(userData)
+    $.post("/api/users", userData)
+
+  }
 
 })
 
