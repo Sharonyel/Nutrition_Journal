@@ -22,7 +22,7 @@ let age = 45
 // }
 
 // test();
-
+function picture(){
 var settings = {
     "async": true,
     "crossDomain": true,
@@ -41,13 +41,14 @@ var settings = {
     "processData": false,
 
 }
-function picture(){
+
 $.ajax(settings).done(function (response) {
     console.log(response);
-
+    document.querySelector("#img2").setAttribute("src", response.common[0].photo.thumb)
 
 });
 }
+
 function foodAjax(){
 var settings2 = {
     "async": true,
@@ -57,8 +58,8 @@ var settings2 = {
     "headers": {
         "content-type": "application/json",
         "accept": "application/json",
-        "x-app-id": "b04916a8",
-        "x-app-key": "a0297706ab50712f995e4ad30909ae42",
+        "x-app-id": "b95385e2",
+        "x-app-key": "497185225a39b61421f6f0e7fb75a0d5",
         "x-remote-user-id": "0",
         "cache-control": "no-cache",
         "postman-token": "fa71a67a-c306-e015-1ccb-f9e7b4dd2424"
@@ -148,8 +149,8 @@ let exercise = {
     "headers": {
         "content-type": "application/json",
         "accept": "application/json",
-        "x-app-id": "b04916a8",
-        "x-app-key": "a0297706ab50712f995e4ad30909ae42",
+        "x-app-id": "b95385e2",
+        "x-app-key": "497185225a39b61421f6f0e7fb75a0d5",
         "x-remote-user-id": "0",
         "cache-control": "no-cache",
         "postman-token": "fa71a67a-c306-e015-1ccb-f9e7b4dd2424"

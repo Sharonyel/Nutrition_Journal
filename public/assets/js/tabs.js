@@ -38,6 +38,7 @@ if (foodButton) {
       console.log(foodSearch);
       
       foodAjax()
+      picture();
 
   })
 };
