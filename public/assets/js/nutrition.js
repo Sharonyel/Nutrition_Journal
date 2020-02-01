@@ -1,4 +1,4 @@
-let foodSearch = "pancakes"
+let foodSearch = $('#input').val();
 let exeInput = "run 30 minutes"
 let gender = "male"
 let weight = 150
@@ -6,6 +6,7 @@ let weightKg = weight / 2.205
 let height = 72
 let heightCm = height * 2.54
 let age = 45
+
 // function test() {
 
 //     $.ajax({
@@ -40,13 +41,14 @@ var settings = {
     "processData": false,
 
 }
-
+function picture(){
 $.ajax(settings).done(function (response) {
     console.log(response);
 
 
 });
-
+}
+function foodAjax(){
 var settings2 = {
     "async": true,
     "crossDomain": true,
@@ -131,7 +133,7 @@ $.ajax(settings2).done(function (response) {
     });
 
 });
-
+}
 let data = `{"query": "${exeInput}",
         "gender": "${gender}",
         "weight_kg": ${weightKg},

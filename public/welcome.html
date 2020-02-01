@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-font-face.min.css"
     media="all">
   <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-shims.min.css" media="all">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Archivo+Black" />
+    <link rel="stylesheet" type="text/css" href="assets/css/nutritionLabel.css">
 </head>
 
 <body>
@@ -79,7 +81,21 @@
       <div class="tab-pane is-active" id="pane-2" style="display: none;">
         <div class="card large">
           <div class="card-content">
-            <h1>Hello World</h1>
+            <div><h1>Search our database of foods</h1></div>
+            <br>
+            <div class="field is-grouped">
+              <p class="control is-expanded">
+                <input class="input" id="input" type="text" value="Orange" placeholder="Search Food">
+              </p>
+              <p class="control">
+                <a class="button is-info" id="foodButton">
+                  Search
+                </a>
+              </p>
+            </div>
+          
+            <br>
+            <div id="img1"></div>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus
               ultrices eleifend gravida, nulla nunc varius lectus, nec rutrum justo nibh eu lectus. Ut vulputate semper
               dui. Fusce erat odio, sollicitudin vel erat vel, interdum mattis neque. works as well!
@@ -101,6 +117,9 @@
 
   </section>
   <!-- <script src="bulma.js"></script> -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+  <script type="text/javascript" src='assets/js/nutritionLabel.js'></script>
+  <script type='text/javascript' src='assets/js/nutrition.js'></script>
   <script src="assets/js/tabs.js"></script>
 
 

@@ -25,3 +25,19 @@ document.querySelectorAll("#nav li").forEach(function(navEl) {
       }
     });
   }
+
+// let food
+foodButton = document.querySelector("#foodButton")
+  // event listener for city searchbar
+if (foodButton) {
+  foodButton.addEventListener("click", function (event) {
+
+      event.preventDefault();
+      foodSearch = $('#input').val();
+      
+      console.log(foodSearch);
+      
+      foodAjax()
+
+  })
+};
