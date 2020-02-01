@@ -1,21 +1,46 @@
 var db = require("../models");
-module.exports = function(app) {
+module.exports = function (app) {
 
-    app.get("/api/foods", function(req, res) {
+    app.get("/api/foods", function (req, res) {
         var query = {};
         if (req.query.user_id) {
-          query.UserId = req.query.user_id;
+            query.UserId = req.query.user_id;
         }
-        // Here we add an "include" property to our options in our findAll query
-        // We set the value to an array of the models we want to include in a left outer join
-        // In this case, just db.Author
-        db.Post.findAll({
-          where: query,
-          include: [db.User]
-        }).then(function(dbPost) {
-          res.json(dbPost);
+
+        db.Food.findAll({
+            where: query,
+            include: [db.User]
+        }).then(function (dbFood) {
+            res.json(dbFood);
         });
-      });
+    });
+
+    app.post("/api/foods", function (req, res) {
+        db.Food.create(req.body).then(function (dbFood) {
+            res.json(dbFood);
+        })
+    })
+
+    app.delete("/api/foods/:id", function (req, res) {
+        db.Food.destroy({
+            where: {
+                id: req.params.id
+            }
+        }).then(function (dbFood) {
+            res.json(dbFood);
+        });
+    });
 
 
+    app.put("/api/foods", function (req, res) {
+        db.Food.update(
+            req.body,
+            {
+                where: {
+                    id: req.body.id
+                }
+            }).then(function (dbFood) {
+                res.json(dbFood);
+            });
+    });
 }
