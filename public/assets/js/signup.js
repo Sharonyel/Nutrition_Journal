@@ -1,40 +1,48 @@
-$(function() {
-    $("#form-signin").on("click", function(event) {
-        event.preventDefault();
-        console.log("here")
-        console.log("clicked")
-        var userInput = $(".userName").val().trim();
-        var passwordInput = $(".passWord").val().trim();
-  console.log(userInput)
-  console.log(passwordInput)
-    });
- })
- $("#form-signup").on("click", function(event) {
-     event.preventDefault();
-     var newUser = {
-         user_name: $(".cuserName").val().trim(),
-         first_name: $(".cfirstName").val().trim(),
-         last_name: $(".clastName").val().trim(),
-         password: $(".cpassWord").val().trim(),
-         age: $(".cAge").val().trim(),
-         weight: $(".cWeight").val().trim(),
-         height: $(".cHeight").val().trim(),
-         gender: $(".cGender").val().trim(),
-       };
-       console.log(newUser)
-     //   $.ajax("/api/", {
-     //     type: "POST",
-     //     data: newUser
-     //   }).then(
-     //     function() {
-     //       console.log("created new user");
-     //       // Reload the page to get the updated list
-     //     //   location.reload();
-     //     }
-     //   );
-   
- });
+$(document).ready(function () {
+
+  var username = $(".cuserName").val().trim();
+  var firstname = $(".cfirstName").val().trim();
+  var lastname = $(".clastName").val().trim();
+  var password = $(".cpassWord").val().trim();
+  var age = $(".cAge").val().trim();
+  var weight = $(".cWeight").val().trim();
+  var height = $(".cHeight").val().trim();
+  var gender = $(".cGender").attr("data-name");
+
+  $(document).on("click", "#user-signup", handleUserSignUp);
+  $(document).on("click", "#user-signin", handleUserSignIn);
+      
+  function handleUserSignUp(event) {
+    event.preventDefault();
+    // Don't do anything if the name fields hasn't been filled out
+    if (!username) {
+      return;
+    }
+    // 
+
+enterUser({
+  user_name: username,
+  first_name: firstname,
+  last_name: lastname,
+  password: password,
+  age: age,
+  weight: weight,
+  height: height,
+  gender: gender
   
+});
+}
+
+// A function for creating an author. Calls getAuthors upon completion
+function enterUser(userData) {
+$.post("/api/users", userData)
+
+}
+
+})
+
+
+
  // code for the calander is below
  // import bulmaCalendar from '~bulma-calendar/dist/js/bulma-calendar.min.js';
  // // Initialize all input of date type.
@@ -54,4 +62,3 @@ $(function() {
  //      console.log(datepicker.data.value());
  //  });
  // }
- 
