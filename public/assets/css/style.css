@@ -1,6 +1,4 @@
-/* body { */
-    /* background: url("/Users/sharonyvette/project2/public/assets/images/background.jpg")center center; background-size:cover;  */
-/* } */
+
 .hero.is-info{
     background: url('../assets/images/background.jpg')center center; background-size:cover; 
     background: -webkit-linear-gradient(rgba(68, 40, 40, 0), rgb(228, 191, 157));
