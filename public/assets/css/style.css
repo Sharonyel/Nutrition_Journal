@@ -4,9 +4,9 @@
     background: -webkit-linear-gradient(rgba(68, 40, 40, 0), rgb(228, 191, 157));
     
 }
-/* .signin { */
-    /* background-color: orange; */
-/* } */
+/* .signin {
+    background-color: orange;
+} */
 .hero.is-info .title  {
     color: white;
     font-size: 100px;
