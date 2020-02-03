@@ -76,7 +76,7 @@ if (exerciseLogButton) {
       console.log(today);
       console.log(calories)
       
-      // handleFormSubmit();
+      handleFormSubmit();
 
   })
 };
@@ -84,40 +84,21 @@ if (exerciseLogButton) {
 // A function for handling what happens when the form to create a new post is submitted
 function handleFormSubmit(event) {
   event.preventDefault();
-  // Wont submit the post if we are missing a body, title, or author
-  if (!time.val().trim() || !workout.val().trim() || !today.val() || !calories.val()) 
-    return;
-  }
+ 
   // Constructing a newPost object to hand to the database
   var newPost = {
-    exercise_name: workout
-      .val()
-      .trim(),
-    duration: time
-      .val()
-      .trim(),
-    calories_burned: calories
-    .val()
-    .trim(),
-    date: today
-    .val()
-    .trim()
+    exercise_name: workout.val().trim(),
+    duration: time.val().trim(),
+    calories_burned: calories.val().trim(),
+    date: today.val().trim()
   };
 
-  // If we're updating a post run updatePost to update a post
-  // Otherwise run submitPost to create a whole new post
-  if (updating) {
-    newPost.id = postId;
-    updatePost(newPost);
-  }
-  else {
     submitPost(newPost);
-  }
 
-
+}
 // Submits a new post and brings user to blog page upon completion
 function submitPost(post) {
   $.post("/api/exercises", post, function() {
-  
+    window.location.href = "/blog";
   });
 }
