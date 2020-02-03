@@ -70,10 +70,40 @@
       <div class="tab-pane" id="pane-3" style="display: none;">
         <div class="card large">
           <div class="card-content">
-            <h1>Dominic Ipsum</h1>
-            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa
-              fringilla egestas. Nullam condimentum luctus turpis.
-            </p>
+
+            <h1>Enter your workout details!</h1>
+            <br>
+            <div class="field is-grouped is-grouped is-grouped-multiline">
+              <p class="control is-expanded">
+                <input class="input is-large" id="time"  placeholder="Enter workout time in minutes">
+              </p>
+
+              <p class="control is-expanded is-grouped is-grouped-multiline">
+                <input class="input is-large" id="workout" placeholder="Enter workout">
+              </p>
+              <p class="control">
+                <a class="button is-info is-large" id="workoutButton">
+                  Search
+                </a>
+              </p>
+            </div>
+            <br>
+            <br>
+            <div class="exerciseInfo hidden">
+              <p id="date"></p>
+              <p id="workoutLength"></p>
+              <p id="workoutInfo"></p>
+              <p id="calories"></p>
+              <br>
+              <p class="control">
+                <a class="button is-info is-large" id="exerciseLog">
+                  Log todays workout
+                </a>
+              </p>
+            </div>
+            
+
+
           </div>
         </div>
       </div>

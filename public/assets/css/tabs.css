@@ -86,5 +86,14 @@ body {
        
      
     }
-     
+
+    #time {
+        margin-right: 20px;
+    }
+    #workout{
+        margin-right: 20px;
+    }
   
+    .hidden{
+        display: none;
+    }
