@@ -27,12 +27,13 @@ console.log(loginData)
             user_name: user_name,
             password: password
         })
-        .then(function(login) {
-           console.log(login);
+        .then(function() {
+            window.location.replace("/welcome")
 
         })
-        .catch(function(err) {
-            console.log(err);
-        });
+        // .catch(function(err) {
+        //     console.log(err)
+        // });
+        
     }
 });

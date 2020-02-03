@@ -24,7 +24,7 @@ module.exports = function (app) {
     });
 
     app.post("/api/users", function (req, res) {
-        console.log(req.body)
+        console.log("api/users", req.body)
         db.User.create(req.body)
         .then(function() {
             res.redirect(307, "/api/login");
@@ -44,6 +44,25 @@ module.exports = function (app) {
         }).then(function (dbUser) {
             res.json(dbUser);
         });
+    });
+// Sharon added this to test passport error messages for incorrect info
+    app.get('/api/login', function(req, res, next) {
+        passport.authenticate('local', function(err, dbUser, info) {
+            if (err) {
+                console.log("is this an err " + err, dbUser)
+                return next(err);
+            
+            }
+            if (!dbUser) {
+                return res.status(401).send({"ok": falsae});
+            }
+            req.logIn(dbUser, function(err) {
+                if (err) {
+                    return next(err);
+                }
+                return res.send({"ok": true});
+            });
+        })(req, res, next);
     });
 
     app.post("/api/login", passport.authenticate("local"), function(req, res) {
