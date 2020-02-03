@@ -24,7 +24,7 @@ module.exports = function (app) {
     });
 
     app.post("/api/users", function (req, res) {
-        console.log(req.body)
+        console.log("api/users", req.body)
         db.User.create(req.body)
         .then(function() {
             res.redirect(307, "/api/login");
@@ -45,25 +45,44 @@ module.exports = function (app) {
             res.json(dbUser);
         });
     });
+// Sharon added this to test passport error messages for incorrect info
+    app.get('/api/login', function(req, res, next) {
+        passport.authenticate('local', function(err, dbUser, info) {
+            if (err) {
+                console.log("is this an err " + err, dbUser)
+                return next(err);
+            
+            }
+            if (!dbUser) {
+                return res.status(401).send({"ok": falsae});
+            }
+            req.logIn(dbUser, function(err) {
+                if (err) {
+                    return next(err);
+                }
+                return res.send({"ok": true});
+            });
+        })(req, res, next);
+    });
 
     app.post("/api/login", passport.authenticate("local"), function(req, res) {
         res.json(req.user);
       });
     
   // Route for getting some data about our user to be used client side
-  app.get("/api/user_data", function(req, res) {
-    if (!req.user) {
-      // The user is not logged in, send back an empty object
-      res.json({});
-    } else {
-      // Otherwise send back the user's email and id
-      // Sending back a password, even a hashed password, isn't a good idea
-      res.json({
-        email: req.user.email,
-        id: req.user.id
-      });
-    }
-  });
+//   app.get("/api/user_data", function(req, res) {
+//     if (!req.user) {
+//       // The user is not logged in, send back an empty object
+//       res.json({});
+//     } else {
+//       // Otherwise send back the user's email and id
+//       // Sending back a password, even a hashed password, isn't a good idea
+//       res.json({
+//         email: req.user.email,
+//         id: req.user.id
+//       });
+//     }
+//   });
 
 
 
