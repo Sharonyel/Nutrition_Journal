@@ -69,7 +69,7 @@ if (exerciseLogButton) {
       console.log(time);
       console.log(workout);
       console.log(exeInput)
-      console.log(today);
+      console.log(inverseToday);
       console.log(calories)
       
       handleFormSubmit();
@@ -79,21 +79,29 @@ if (exerciseLogButton) {
 
 // A function for handling what happens when the form to create a new post is submitted
 function handleFormSubmit() {
+
   // Constructing a newPost object to hand to the database
   newPost ({
     exercise_name: workout,
     duration: time,
-    calories_burned: calories,
-    date: today
+
+    calories_burned: calories.toFixed(0),
+    date: inverseToday,
+    UserId: 1
+
 
   });
 
-    // submitPost(newPost);
+
+  console.log(newPost);
+
+    submitPost(newPost);
 
 }
 // Submits a new post and brings user to blog page upon completion
-function newPost(post) {
-  $.post("/api/exercises", post)
- 
-}
+function submitPost(post) {
+  console.log(post);
+  $.post("/api/exercises", post
+    
+  )};
 
