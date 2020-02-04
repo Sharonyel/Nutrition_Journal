@@ -47,17 +47,13 @@ workoutButton = document.querySelector("#workoutButton")
  
 if (workoutButton) {
   workoutButton.addEventListener("click", function (event) {
-
       event.preventDefault();
-      workout = $('#workout').val().trim()
-      time = $('#time').val().trim();
+
+      var workout = $('#workout').val().trim();
+      var time = $('#time').val().trim();
       exeInput = workout +" "+ time +" minutes"
       console.log(today);
       console.log(workout);
-      
-
-
-      
       workoutInfo();
 
   })
@@ -85,14 +81,17 @@ if (exerciseLogButton) {
 function handleFormSubmit() {
 
   // Constructing a newPost object to hand to the database
-  var newPost = {
+  newPost ({
     exercise_name: workout,
     duration: time,
+
     calories_burned: calories.toFixed(0),
     date: inverseToday,
     UserId: 1
 
-  };
+
+  });
+
 
   console.log(newPost);
 
@@ -105,3 +104,4 @@ function submitPost(post) {
   $.post("/api/exercises", post
     
   )};
+
