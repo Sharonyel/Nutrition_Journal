@@ -6,7 +6,7 @@ module.exports = function(app){
         res.sendFile(path.join(__dirname, "../public/landing.html"));
       });
 
-      app.get("/welcome", function(req, res) {
+      app.get("/welcome", isAuthenticated, function(req, res) {
         res.sendFile(path.join(__dirname, "../public/welcome.html"));
       });
 

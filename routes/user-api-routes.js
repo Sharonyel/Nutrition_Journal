@@ -54,7 +54,7 @@ module.exports = function (app) {
             
             }
             if (!dbUser) {
-                return res.status(401).send({"ok": falsae});
+                return res.status(401).send({"ok": false});
             }
             req.logIn(dbUser, function(err) {
                 if (err) {
@@ -66,7 +66,9 @@ module.exports = function (app) {
     });
 
     app.post("/api/login", passport.authenticate("local"), function(req, res) {
+        console.log(req.user);
         res.json(req.user);
+
       });
     
   // Route for getting some data about our user to be used client side

@@ -28,6 +28,7 @@ console.log(loginData)
             password: password
         })
         .then(function() {
+            console.log("completed verify")
             window.location.replace("/welcome")
 
         })
