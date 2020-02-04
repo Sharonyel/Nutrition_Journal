@@ -11,6 +11,7 @@ let time = $('#time').val().trim();
 let exeInput = (time + workout);
 let today
 let calories
+let inverseToday 
 
 // function test() {
 
@@ -186,6 +187,7 @@ function workoutInfo() {
         var yyyy = today.getFullYear();
         calories = response.exercises[0].nf_calories
         today = mm + '/' + dd + '/' + yyyy;
+        inverseToday = yyyy + '-' + mm + '-' + dd
         // document.write(today);
 
         document.querySelector("#date").textContent= "Date: "+ today
