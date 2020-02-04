@@ -102,6 +102,6 @@ function handleFormSubmit() {
 function submitPost(post) {
   console.log(post);
   $.post("/api/exercises", post
-    
+    // post to database
   )};
 
