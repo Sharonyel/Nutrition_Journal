@@ -1,6 +1,6 @@
 document.querySelectorAll("#nav li").forEach(function(navEl) {
     navEl.onclick = function() { toggleTab(this.id, this.dataset.target); }
-  });
+  });zz
   
   function toggleTab(selectedNav, targetId) {
     var navEls = document.querySelectorAll("#nav li");
@@ -83,14 +83,14 @@ if (exerciseLogButton) {
 
 // A function for handling what happens when the form to create a new post is submitted
 function handleFormSubmit(event) {
-  event.preventDefault();
+//   event.preventDefault();
  
   // Constructing a newPost object to hand to the database
   var newPost = {
-    exercise_name: workout.val().trim(),
-    duration: time.val().trim(),
-    calories_burned: calories.val().trim(),
-    date: today.val().trim()
+    exercise_name: workout,
+    duration: time,
+    calories_burned: calories,
+    date: today
   };
 
     submitPost(newPost);
@@ -99,6 +99,6 @@ function handleFormSubmit(event) {
 // Submits a new post and brings user to blog page upon completion
 function submitPost(post) {
   $.post("/api/exercises", post, function() {
-    window.location.href = "/blog";
+    window.location.href = "/welcome";
   });
 }
