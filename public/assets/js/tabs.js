@@ -81,16 +81,15 @@ if (exerciseLogButton) {
 function handleFormSubmit() {
 
   // Constructing a newPost object to hand to the database
-  newPost ({
+  var newPost = {
     exercise_name: workout,
     duration: time,
-
     calories_burned: calories.toFixed(0),
     date: inverseToday,
     UserId: 1
 
 
-  });
+  };
 
 
   console.log(newPost);
