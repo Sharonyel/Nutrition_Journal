@@ -21,20 +21,19 @@ console.log(loginData)
         passWord.val("");
     });
 
+  
+
     function loginUser(user_name, password) {
-        console.log(user_name)
         $.post("/api/login", {
             user_name: user_name,
-            password: password
+          password: password
         })
-        .then(function() {
-            console.log("completed verify")
-            window.location.replace("/welcome")
-
-        })
-        // .catch(function(err) {
-        //     console.log(err)
-        // });
-        
-    }
+          .then(function() {
+            window.location.replace("/welcome");
+            // If there's an error, log the error
+          })
+          .catch(function(err) {
+            console.log(err);
+          });
+      }
 });
