@@ -1,4 +1,6 @@
 $(document).ready(function() {
+  
+ 
     // This file just does a GET request to figure out which user is logged in
     // and updates the HTML on the page
     $.get("/api/user_data").then(function(data) {
@@ -14,7 +16,21 @@ $(document).ready(function() {
     });
 
 
+    $.get("/api/foods").then(function(data) {
+      console.log(data);
+      for(i=0; i< data.length; i++){      
+       
+        $("#foods").append(`<li>${data[i].date}  ${data[i].food_name} Servings: ${data[i].servings}, ${data[i].calories} Calories </li>`);
+      }
 
+    })
+    $.get("/api/exercises").then(function(data) {
+      console.log(data);
+      for(i=0; i< data.length; i++){      
+       
+        $("#exercises").append(`<li>${data[i].date}  ${data[i].exercise_name}: ${data[i].duration} Minutes, ${data[i].calories_burned} Calories Burned </li>`);
+      }
+    })
 
   });
   

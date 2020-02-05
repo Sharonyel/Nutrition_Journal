@@ -2,14 +2,15 @@ var db = require("../models");
 module.exports = function (app) {
 
     app.get("/api/foods", function (req, res) {
+        console.log(req.user)
         var query = {};
-        if (req.query.user_id) {
-            query.UserId = req.query.user_id;
+        if (req.user.id) {
+            query.UserId = req.user.id;
         }
 
         db.Food.findAll({
             where: query,
-            include: [db.User]
+           
         }).then(function (dbFood) {
             res.json(dbFood);
         });
