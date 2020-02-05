@@ -108,8 +108,44 @@ function submitPost(post) {
 // Initialize all elements with carousel class.
 const carousels = bulmaCarousel.attach('.carousel', options);
 
-// To access to bulmaCarousel instance of an element
-const element = document.querySelector('#my-element');
-if (element && element.bulmaCarousel) {
-	// bulmaCarousel instance is available as element.bulmaCarousel
+
+  foodLogButton = document.querySelector("#logButton")
+  
+if (foodLogButton) {
+  foodLogButton.addEventListener("click", function (event) {
+
+      event.preventDefault();
+    
+      
+      submitFood();
+
+  })
+};
+
+function submitFood() {
+
+  // Constructing a newPost object to hand to the database
+  var newPost = {
+    food_name: foodSearch,
+    servings: serving,
+    calories: calories,
+    date: today,
+    UserId: userId.data('name')
+
+
+  };
+
+
+  console.log(newPost);
+
+    submitPostFood(newPost);
+
 }
+// Submits a new post and brings user to blog page upon completion
+function submitPostFood(post) {
+  console.log(post);
+  $.post("/api/foods", post
+    
+  )};
+
+
