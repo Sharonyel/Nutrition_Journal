@@ -3,8 +3,8 @@ module.exports = function (app) {
 
     app.get("/api/exercises", function (req, res) {
         var query = {};
-        if (req.query.user_id) {
-            query.UserId = req.query.user_id;
+        if (req.user.id) {
+            query.UserId = req.user.id;
         }
 
         db.Exercise.findAll({
