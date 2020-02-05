@@ -6,8 +6,8 @@ $(document).ready(function() {
       // console.log(data)
       $(".user-name").text(data.user_name);
       $("#height").text(`Height: ${data.height}`);
-      $("#weight").text(`Weight: ${data.weight}`);
-      $("#full-name").text(`Full Name: ${data.first_name} ${data.last_name}`);
+      $("#weight").text(`Weight: ${data.weight}lbs`);
+      $("#full-name").text(`Name: ${data.first_name} ${data.last_name}`);
       $("#age").text(`Age: ${data.age}`);
     });
     
