@@ -5,7 +5,14 @@ var passport = require('../config/passport');
 var app = express();
 var PORT = process.env.PORT || 8080;
 var db = require('../models');
+// Set Handlebars.
+var exphbs = require('express-handlebars');
 
+app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
+app.set('view engine', 'handlebars');
+
+// app.use(require('cookie-parser')());
+// app.use(require('body-parser').urlencoded({ extended: false }));
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
