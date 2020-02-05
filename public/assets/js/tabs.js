@@ -106,7 +106,7 @@ function submitPost(post) {
     
   )};
 // Initialize all elements with carousel class.
-const carousels = bulmaCarousel.attach('.carousel', options);
+// const carousels = bulmaCarousel.attach('.carousel', options);
 
 
   foodLogButton = document.querySelector("#logButton")
