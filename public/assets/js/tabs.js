@@ -1,3 +1,4 @@
+var userId = $(".user-name")
 document.querySelectorAll("#nav li").forEach(function(navEl) {
     navEl.onclick = function() { toggleTab(this.id, this.dataset.target); }
   });
@@ -87,7 +88,7 @@ function handleFormSubmit() {
     duration: time,
     calories_burned: calories.toFixed(0),
     date: inverseToday,
-    UserId: 1
+    UserId: userId.data('name')
 
 
   };
