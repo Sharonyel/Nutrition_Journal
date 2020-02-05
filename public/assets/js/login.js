@@ -2,6 +2,8 @@ $(document).ready(function() {
     var userLogin = $("#userLogin")
     var userName = $(".userName");
     var passWord = $(".passWord");
+    var errMess = $(".errMess")
+    var errmess;
 
 
     userLogin.on("click", function(event) {
@@ -33,7 +35,29 @@ $(document).ready(function() {
             // If there's an error, log the error
           })
           .catch(function(err) {
-            console.log(err);
+          errmess = err.responseText;
+            console.log(errmess);
+            getError();
+            
           });
       }
+
+      function getError() {
+      $.get("/login").then(function(data) {
+        $(".errMess").text(`message is : Invalid username & password`)
+        // $("#showModal").click(function() {
+          // $(".modal").addClass("is-active");  
+       alert("User name and/or password is incorrect, Please try again")
+        
+        // $(".modal-close").click(function() {
+        //    $(".modal").removeClass("is-active");
+        // });
+
+      });
+  
+    }
+
+
+
+
 });

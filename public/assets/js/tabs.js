@@ -105,6 +105,9 @@ function submitPost(post) {
   $.post("/api/exercises", post
     
   )};
+// Initialize all elements with carousel class.
+const carousels = bulmaCarousel.attach('.carousel', options);
+
 
   foodLogButton = document.querySelector("#logButton")
   
@@ -144,4 +147,5 @@ function submitPostFood(post) {
   $.post("/api/foods", post
     
   )};
+
 
