@@ -6,7 +6,8 @@ $(document).ready(function () {
   var password = $(".cpassWord")
   var age = $(".cAge")
   var weight = $(".cWeight")
-  var height = $(".cHeight")
+  var feet = $(".cFeet")
+  var inches = $(".cInches")
   var gender = $(".genderOption")
 
 
@@ -25,7 +26,7 @@ $(document).ready(function () {
       password: password.val().trim(),
       age: age.val().trim(),
       weight: weight.val().trim(),
-      height: height.val().trim(),
+      height: (parseInt(feet.val().trim())*12 + parseInt(inches.val().trim())),
       gender: gender.val()
 
 
