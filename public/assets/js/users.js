@@ -7,7 +7,7 @@ $(document).ready(function() {
       $(".user-name").text(data.user_name)
       $(".user-name").data('name',data.id);
       console.log($(".user-name").data('name'))
-      $("#height").text(`Height: ${data.height}`);
+      $("#height").text(`Height: ${parseInt(data.height)/12} feet`);
       $("#weight").text(`Weight: ${data.weight}lbs`);
       $("#full-name").text(`Name: ${data.first_name} ${data.last_name}`);
       $("#age").text(`Age: ${data.age}`);
