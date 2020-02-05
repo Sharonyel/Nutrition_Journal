@@ -9,28 +9,28 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [1]
+        len: [1-255]
       }
     },
     duration: {
       type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
-        len: [1]
+        len: [1-255]
       }
     },
     calories_burned: {
       type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
-        len: [1]
+        len: [1-255]
       }
     },
     date: {
       type: DataTypes.DATEONLY,
       allowNull: false,
       validate: {
-        len: [1]
+        len: [1-255]
       }
     }
   });
