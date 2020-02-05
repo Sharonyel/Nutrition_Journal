@@ -49,8 +49,8 @@ if (workoutButton) {
   workoutButton.addEventListener("click", function (event) {
       event.preventDefault();
 
-      var workout = $('#workout').val().trim();
-      var time = $('#time').val().trim();
+      workout = $('#workout').val().trim();
+      time = $('#time').val().trim();
       exeInput = workout +" "+ time +" minutes"
       console.log(today);
       console.log(workout);
@@ -71,6 +71,7 @@ if (exerciseLogButton) {
       console.log(exeInput)
       console.log(inverseToday);
       console.log(calories)
+      
       
       handleFormSubmit();
 
