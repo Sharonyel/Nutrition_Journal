@@ -9,6 +9,7 @@ module.exports = function (sequelize, DataTypes) {
         },
         user_name: {
             type: DataTypes.STRING,
+            unique: true,
             allowNull: false,
             validate: {
                 len: [1, 225]

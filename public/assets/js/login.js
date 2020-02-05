@@ -6,12 +6,12 @@ $(document).ready(function() {
 
     userLogin.on("click", function(event) {
         event.preventDefault();
-        console.log("clicked")
+        // console.log("clicked")
         var loginData = {
             user_name: userName.val().trim(),
             password: passWord.val().trim()
         };
-console.log(loginData)
+// console.log(loginData)
         if (!loginData.user_name || !loginData.password) {
             return;
         }
