@@ -4,13 +4,15 @@ $(document).ready(function() {
     $.get("/api/user_data").then(function(data) {
       // console.log("getting user data")
       // console.log(data)
-      $(".user-name").text(data.user_name);
+      $(".user-name").text(data.user_name)
+      $(".user-name").data('name',data.id);
+      console.log($(".user-name").data('name'))
       $("#height").text(`Height: ${data.height}`);
       $("#weight").text(`Weight: ${data.weight}`);
       $("#full-name").text(`Full Name: ${data.first_name} ${data.last_name}`);
       $("#age").text(`Age: ${data.age}`);
     });
-    
+
 
 
 
