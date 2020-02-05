@@ -8,6 +8,7 @@
   <title>Nutrition Journal</title>
   <link rel="stylesheet prefetch" href="https://unpkg.com/bulma@0.8.0/css/bulma.min.css">
   <link rel="stylesheet" href="assets/css/tabs.css">
+  <!-- <link rel="stylesheet" href="assets/css/quotes.css"> -->
   <script src="https://kit.fontawesome.com/7dc3015a44.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all">
   <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-font-face.min.css"
@@ -55,14 +56,29 @@
       <div class="tab-pane" id="pane-1" style="display: block;">
         <div class="card large">
           <div class="card-content">
-            <p>
-              <h1 class="profile"><strong>Profile</strong></h1>
-              <ul id="full-name"></ul>
-              <ul id="height">Height: </ul>
-              <ul id="age">Age: </ul>
-              <ul id="weight">Weight: </ul>
-              <!-- <ul id = "weight-loss">Weight Loss:   </ul> -->
-            </p>
+            <div class="columns">
+              <div class="column">
+                <p>
+                  <h1 class="profile"><strong>Profile</strong></h1>
+                  <ul id="full-name"></ul>
+                  <ul id="age">Age: </ul>
+                  <ul id="height">Height: </ul>
+                  <ul id="weight">Weight: </ul>
+                  <!-- <ul id = "weight-loss">Weight Loss:   </ul> -->
+                </p>
+              </div>
+              <div class="column">
+                  <h2 id="nutFact"><strong>Get A Nutriton Fact</strong></h2>
+                    <div id="quoteContainer">
+                      <p id="quoteGenius"></p>			
+                    </div>
+                    <p class="control">
+                      <a class="button is-info is-medium is-centered" id="quoteButton">OK</a>
+                      </a>
+                    </p>
+                </div> 
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -97,7 +113,7 @@
               <br>
               <p class="control">
                 <a class="button is-info is-large" id="exerciseLog">
-                  Log todays workout
+                  Log today's workout
                 </a>
               </p>
             </div>
@@ -168,7 +184,7 @@
   <script type='text/javascript' src='assets/js/nutrition.js'></script>
   <script type='text/javascript' src='assets/js/users.js'></script>
   <script src="assets/js/tabs.js"></script>
-
+  <script src="assets/js/quotes.js"></script>
 
 
 </body>
