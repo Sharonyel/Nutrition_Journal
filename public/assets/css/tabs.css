@@ -1,5 +1,6 @@
 body {
     min-height: 100vh;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     
   }
 
@@ -73,8 +74,9 @@ body {
         padding: 3rem 1.5rem 6rem;
         position: fixed;
         bottom: 0;
+        height: 10px;
         width: 100%;
-        border: 2px solid aqua;
+        border: 1px solid aqua;
         padding-bottom: 2.5rem;
         text-align: center;
         
@@ -97,3 +99,14 @@ body {
     .hidden{
         display: none;
     }
+    ul {
+        font-size: 25px;
+    }
+    .profile {
+        font-size: 35px;
+    }
+    .title, .user-name {
+        font-size: 80px;
+        /* color:  white; */
+    }
+    

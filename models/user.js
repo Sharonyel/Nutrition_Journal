@@ -46,10 +46,8 @@ module.exports = function (sequelize, DataTypes) {
         },
         height: {
             type: DataTypes.INTEGER,
-            allowNull: false,
-            validate: {
-                len: [2, 3]
-            }
+            allowNull: false
+            
         },
         weight: {
             type: DataTypes.INTEGER,

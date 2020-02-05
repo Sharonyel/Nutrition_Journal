@@ -1,5 +1,4 @@
 let foodSearch = $('#input').val()
-
 let gender = "male"
 let weight = 150
 let weightKg = weight / 2.205
@@ -12,6 +11,19 @@ let exeInput = (time + workout);
 let today
 let calories
 let inverseToday 
+
+
+$(document).on("change", "input.unitQuantityBox", function(event){
+    event.stopPropagation();
+    console.log($(this).val());
+    console.log("calories ", calories);
+    var cal = parseFloat(calories);
+    var amount = parseFloat($(this).val());
+    document.querySelector("#calories1").textContent = (cal * amount).toFixed(2);
+    console.log("cal ", cal);
+    console.log("amount ", amount);
+    document.querySelector("#quantity").textContent = (amount * serving);
+})
 
 // function test() {
 
@@ -92,7 +104,7 @@ function foodAjax() {
     $.ajax(settings2).done(function (response) {
         console.log(response);
 
-        let calories = response.foods[0].nf_calories;
+        calories = response.foods[0].nf_calories;
         let totalCarb = response.foods[0].nf_total_carbohydrate;
         let cholesterol = response.foods[0].nf_cholesterol;
         let fiber = response.foods[0].nf_dietary_fiber;
@@ -101,6 +113,12 @@ function foodAjax() {
         let fat = response.foods[0].nf_total_fat;
         let sat = response.foods[0].nf_saturated_fat;
         let sodium = response.foods[0].nf_sodium;
+        serving = response.foods[0].serving_qty;
+
+        document.querySelector("#name").textContent = foodSearch;
+        document.querySelector("#calories1").textContent = calories;
+        document.querySelector("#quantity").textContent = serving;
+        
 
 
         $('#img1').nutritionLabel({

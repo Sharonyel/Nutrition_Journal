@@ -62,12 +62,12 @@
         <div class="card large">
           <div class="card-content">
             <p>
-              <h3>User Profile</h3>
-              <ul id="full-name">Full Name: </ul>
-              <ul id = "height">Height: </ul>
-              <ul id = "age">Age: </ul i>
-              <ul id = "weight">Weight: </ul>
-              <ul id = "weight-loss">Weight Loss: </ul>
+              <h1 class="profile"><strong>Profile</strong></h1>
+              <ul id="full-name"></ul>
+              <ul id="height">Height: </ul>
+              <ul id="age">Age: </ul>
+              <ul id="weight">Weight: </ul>
+              <!-- <ul id = "weight-loss">Weight Loss:   </ul> -->
             </p>
           </div>
         </div>
@@ -81,7 +81,7 @@
             <br>
             <div class="field is-grouped is-grouped is-grouped-multiline">
               <p class="control is-expanded">
-                <input class="input is-large" id="time"  placeholder="Enter workout time in minutes">
+                <input class="input is-large" id="time" placeholder="Enter workout time in minutes">
               </p>
 
               <p class="control is-expanded is-grouped is-grouped-multiline">
@@ -107,7 +107,7 @@
                 </a>
               </p>
             </div>
-            
+
 
 
           </div>
@@ -133,7 +133,23 @@
             </div>
 
             <br>
-            <div id="img1"></div>
+            <div class="columns">
+              <div class="column" id="img1"></div>
+              <div class="column">
+                <p></p>
+                <span>Name: </span><span id="name"></span>
+                <p></p>
+                <span>Calories: </span><span id="calories1"></span>
+                <p></p>
+                <span>Quantity: </span><span id="quantity"></span>
+                <p class="control">
+                  <a class="button is-info" id="logButton">
+                    Log
+                  </a>
+                </p>
+              </div>
+
+            </div>
             <div><img id='img2' height='140px' width='200px' src=''></div>
           </div>
         </div>
