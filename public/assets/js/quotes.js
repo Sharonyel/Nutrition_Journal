@@ -46,14 +46,28 @@ $(document).ready(function(){
     }
 
 ];
-    
+    $( window ).on( "load", function() {
+        var sourceLength = quoteSource.length;
+        var randomNumber= Math.floor(Math.random()*sourceLength);
+        var newQuoteText = quoteSource[randomNumber].quote;
+        var newQuoteGenius = quoteSource[randomNumber].name;
+        var timeAnimation = 500;
+        var quoteContainer = $('#quoteContainer');
+        //fade out animation with callback
+        quoteContainer.fadeOut(timeAnimation, function(){
+          quoteContainer.html('');
+                  quoteContainer.append('<p>'+newQuoteText+'</p>'+'<p id="quoteGenius">'+'-								'+newQuoteGenius+'</p>');
+          //fadein animation.
+          quoteContainer.fadeIn(timeAnimation);
+      
 
-    $('#quoteButton').click(function(evt){
-        //define the containers of the info we target
-        var quote = $('#quoteContainer p').text();
-        var quoteGenius = $('#quoteGenius').text();
-        //prevent browser's default action
-        evt.preventDefault();
+
+    console.log( "window loaded" );
+        });
+    })
+
+    $('#quoteButton').click(function(event){
+        event.preventDefault();
         //getting a new random number to attach to a quote and setting a limit
         var sourceLength = quoteSource.length;
         var randomNumber= Math.floor(Math.random()*sourceLength);

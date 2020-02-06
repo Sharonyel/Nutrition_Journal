@@ -20,11 +20,11 @@
 
 <body>
 
-  <section class="hero is-info">
-    <div class="hero-body">
+  <section class="hero is-info has-background img.hero-background.is-transparent">
+    <div class="hero is-link">
       <div class="container">
-        <h1 class="title">
-          Welcome
+        <h1 class="title" id="welcome">
+          Welcome User
         </h1>
         <h2 class="subtitle user-name" data-name="">
         </h2>
@@ -74,60 +74,64 @@
                 </p>
               </div>
               <div class="column">
-                  <h2 id="nutFact"><strong>Get A Nutriton Fact</strong></h2>
-                    <div id="quoteContainer">
-                      <p id="quoteGenius"></p>			
-                    </div>
-                    <p class="control">
-                      <a class="button is-info is-medium is-centered" id="quoteButton">OK</a>
-                      </a>
-                    </p>
+
+                <h2 id="nutFact"><strong>Get A Nutriton Fact</strong></h2>
+                <div id="quoteContainer">
+                  <p id="quoteGenius"></p>
+                </div>
+                <p class="control">
+                  <a class="button is-info is-medium is-centered" id="quoteButton">OK</a>
+                  </a>
+                </p>
+
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="tab-pane" id="pane-3" style="display: none;">
-        <div class="card large">
-          <div class="card-content">
+    <div class="tab-pane" id="pane-3" style="display: none;">
+      <div class="card large">
+        <div class="card-content">
 
-            <h1>Enter your workout details!</h1>
-            <br>
-            <div class="field is-grouped is-grouped is-grouped-multiline">
-              <p class="control is-expanded">
-                <input class="input is-large" id="time" placeholder="Enter workout time in minutes">
-              </p>
+          <h1>Enter your workout details!</h1>
+          <br>
+          <div class="field is-grouped is-grouped is-grouped-multiline">
+            <p class="control is-expanded">
+              <input class="input is-large" id="time" placeholder="Enter workout time in minutes">
+            </p>
 
-              <p class="control is-expanded is-grouped is-grouped-multiline">
-                <input class="input is-large" id="workout" placeholder="Enter workout">
-              </p>
-              <p class="control">
-                <a class="button is-info is-large" id="workoutButton">
-                  Search
-                </a>
-              </p>
-            </div>
-            <br>
-            <br>
-            <div class="exerciseInfo hidden">
-              <p id="date"></p>
-              <p id="workoutLength"></p>
-              <p id="workoutInfo"></p>
-              <p id="calories"></p>
-              <br>
-              <p class="control">
-                <a class="button is-info is-large" id="exerciseLog">
-                  Log today's workout
-                </a>
-              </p>
-            </div>
-
-
-
+            <p class="control is-expanded is-grouped is-grouped-multiline">
+              <input class="input is-large" id="workout" placeholder="Enter workout">
+            </p>
+            <p class="control">
+              <a class="button is-info is-large" id="workoutButton">
+                Search
+              </a>
+            </p>
           </div>
+          <br>
+          <br>
+          <div class="exerciseInfo hidden">
+            <p id="date"></p>
+            <p id="workoutLength"></p>
+            <p id="workoutInfo"></p>
+            <p id="calories"></p>
+            <br>
+            <p class="control">
+              <a class="button is-info is-large" id="exerciseLog">
+                Log today's workout
+              </a>
+            </p>
+          </div>
+
+
+
         </div>
       </div>
+    </div>
+
 
       <div class="tab-pane is-active" id="pane-2" style="display: none;">
         <div class="card large">
@@ -140,58 +144,75 @@
               <p class="control is-expanded">
                 <input class="input" id="input" type="text" value="" placeholder="Search Food">
               </p>
+
+              
               <p class="control">
-                <a class="button is-info" id="foodButton">
-                  Search
+                <a class="button is-info" id="logButton">
+                  Log
                 </a>
               </p>
             </div>
 
-            <br>
-            <div class="columns">
-              <div class="column" id="img1"></div>
-              <div class="column">
-                <p></p>
-                <span>Name: </span><span id="name"></span>
-                <p></p>
-                <span>Calories: </span><span id="calories1"></span>
-                <p></p>
-                <span>Quantity: </span><span id="quantity"></span>
-                <p class="control">
-                  <a class="button is-info" id="logButton">
-                    Log
-                  </a>
-                </p>
-              </div>
-
-            </div>
-            <div><img id='img2' height='140px' width='200px' src=''></div>
           </div>
-        </div>
-      </div>
-
-      <div class="tab-pane is-active" id="pane-4" style="display: none;">
-        <div class="card large">
-          <div class="card-content">
-            <div>
-              <h1>Your Information</h1>
-            </div>
-           
-
-            <br>
-            <ul id= "exercises"></ul>
-            <br>
-            <ul id= "foods"></ul>
-           
-
-           
-          </div>
+          <div><img id='img2' height='140px' width='200px' src=''></div>
         </div>
       </div>
     </div>
 
+    <div class="tab-pane is-active" id="pane-4" style="display: none;">
+      <div class="card large">
+        <div class="card-content">
+          <div>
+            <h1>Your Information</h1>
+          </div>
+
+          <br>
+          <br>
+          <ul id= "exercises"></ul>
+          <br>
+          <ul id= "foods"></ul>
+         
+
+          <!-- <table class="table" id="foods">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Exercise</th>
+                <th>Time</th>
+                <th>Calories Eaten</th>
+              </tr>
+            </thead>
+          </table>
+          <br>
+
+          <table class="table" id="exercises">
+           
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Food</th>
+                  <th>Serving</th>
+                  <th>Calories Burned</th>
+                </tr>
+              </thead>
+              <tbody>
+              <tr>
+              
+                <td></td>
+              </tr>
+            
+            </tbody>
+          </table>
+ -->
+
+
+        </div>
+      </div>
     </div>
-    <footer class="footer">
+    </div>
+
+    </div>
+    <!-- <footer class="footer hero-foot">
       <div class="content has-text-centered">
         <p>
           <strong style="color: #4d6a1b;"> © 2020 Thomas Argent, Alexander Garcia, Sharon Yelverton, Matt Dominick
@@ -199,7 +220,7 @@
 
         </p>
       </div>
-    </footer>
+    </footer> -->
 
   </section>
   <!-- <script src="bulma.js"></script> -->

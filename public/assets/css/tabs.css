@@ -62,8 +62,10 @@ body {
         height: 100%;
         
     }
+
     .hero-body {
         background: url('../images/image2.jpg'); 
+
         background-size: cover;
     }
 
@@ -149,7 +151,15 @@ body {
         font-weight: 600;
         text-align: center;
     }
-    
+    /* td{
+        width: 25px;
+    } */
+    /* ul {
+        font-weight: bold;
+    } */
+    /* #welcome {
+        font-co
+    } */
     
     
     /*MEDIA QUERIES*/

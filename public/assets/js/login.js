@@ -8,12 +8,12 @@ $(document).ready(function() {
 
     userLogin.on("click", function(event) {
         event.preventDefault();
-        // console.log("clicked")
+       
         var loginData = {
             user_name: userName.val().trim(),
             password: passWord.val().trim()
         };
-// console.log(loginData)
+ 
         if (!loginData.user_name || !loginData.password) {
             return;
         }
@@ -45,13 +45,8 @@ $(document).ready(function() {
       function getError() {
       $.get("/login").then(function(data) {
         $(".errMess").text(`message is : Invalid username & password`)
-        // $("#showModal").click(function() {
-          // $(".modal").addClass("is-active");  
        alert("User name and/or password is incorrect, Please try again")
         
-        // $(".modal-close").click(function() {
-        //    $(".modal").removeClass("is-active");
-        // });
 
       });
   
