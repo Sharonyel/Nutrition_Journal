@@ -15,31 +15,24 @@
   <link rel="stylesheet" href="https://unpkg.com/bulma@0.8.0/css/bulma.min.css">
   <link rel="stylesheet" type="css" href="/assets/css/style.css" />
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-​
-  <!-- <link href="~bulma-calendar/dist/css/bulma-calendar.min.css" rel="stylesheet"> -->
-​
-​
 </head>
 ​
 <body>
-  <section class="hero is-fullheight">
+  <section class="hero is-fullheight" style="background-image: linear-gradient(45deg,rgb(233, 193, 193), rgb(93, 94, 73))">
     <div class="hero-body signin">
       <div class="container has-text-centered">
         <div class="column is-4 is-offset-4">
-          <h3 class="title has-text-black">Login</h3>
+          <h3 class="title has-text-black">Nutrition Journal</h3>
           <hr class="login-hr">
           <p class="subtitle has-text-black">Please login to proceed.</p>
           <div class="box">
-            <div class="field">
+            <div class="field">                
+            <form action="/login" method="post">
               <p class="control has-icons-left has-icons-right">
-                <form action="/login" method="post">
                 <input class="input userName" name="username" type="text" placeholder="User Name">
-                <!-- <span class="icon is-small is-left">
+                <span class="icon is-small is-left">
                   <i class="fas fa-user-circle"></i>
-                </span> -->
-                <!-- <span class="icon is-small is-right">
-                  <i class="fas fa-check"></i>
-                </span> -->
+                </span>
               </p>
             </div>
             <div class="field">
@@ -57,18 +50,13 @@
           </form>
         </div>
         <p class="has-text-grey">
-          <a href="/signup">Sign Up</a>
-          <a href="/">Home</a> 
+          <button class="button"><a href="/signup">Sign Up</a></button>
+          <button class="button"><a href="/">Home</a></button>
 
         </p>
       </div>
     </div>
     </div>
-
-
-
-
-
     <div class="container" id="app">
       <div class="modal">
         <div class="modal-background"></div>

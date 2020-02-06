@@ -1,12 +1,13 @@
 var express = require('express');
 var session = require('express-session');
 var passport = require('../config/passport');
+var exphbs = require('express-handlebars');
+
 
 var app = express();
 var PORT = process.env.PORT || 8080;
 var db = require('../models');
 // Set Handlebars.
-var exphbs = require('express-handlebars');
 
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
