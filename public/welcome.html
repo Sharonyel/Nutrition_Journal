@@ -20,11 +20,11 @@
 
 <body>
 
-  <section class="hero is-info">
-    <div class="hero-body">
+  <section class="hero is-info has-background img.hero-background.is-transparent">
+    <div class="hero is-link">
       <div class="container">
-        <h1 class="title">
-          Welcome
+        <h1 class="title" id="welcome">
+          Welcome User
         </h1>
         <h2 class="subtitle user-name" data-name="">
         </h2>
@@ -74,6 +74,7 @@
                 </p>
               </div>
               <div class="column">
+
                 <h2 id="nutFact"><strong>Get A Nutriton Fact</strong></h2>
                 <div id="quoteContainer">
                   <p id="quoteGenius"></p>
@@ -82,11 +83,14 @@
                   <a class="button is-info is-medium is-centered" id="quoteButton">OK</a>
                   </a>
                 </p>
+
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
+
 
       <div class="tab-pane" id="pane-3" style="display: none;">
         <div class="card large">
@@ -123,6 +127,7 @@
                     Log today's workout
                   </a>
 
+
                 </div>
                 <div class="exerciseSubmit hidden is-centered">
                   <p>Great Job! Your exercised has been submitted.</p>
@@ -131,13 +136,15 @@
               </div>
             </div>
 
-          </div>
         </div>
       </div>
+    </div>
+
 
       <div class="tab-pane is-active " id="pane-2" style="display: none;">
         <div class="card large">
           <div class="card-content">
+
             <div class="columns">
               <div class="column">
                 <h1 id="foodSearch">Search our database of foods</h1>
@@ -183,39 +190,76 @@
 
 
 
+
           </div>
+          <div><img id='img2' height='140px' width='200px' src=''></div>
         </div>
       </div>
-      <div class="tab-pane is-active" id="pane-4" style="display: none;">
-        <div class="card large">
-          <div class="card-content">
-            <div>
-              <h1>Your Information</h1>
-            </div>
 
+    </div>
 
-            <br>
-            <ul id="exercises"></ul>
-            <br>
-            <ul id="foods"></ul>
-
-
-
+    <div class="tab-pane is-active" id="pane-4" style="display: none;">
+      <div class="card large">
+        <div class="card-content">
+          <div>
+            <h1>Your Information</h1>
           </div>
+
+          <br>
+          <br>
+          <ul id= "exercises"></ul>
+          <br>
+          <ul id= "foods"></ul>
+         
+
+          <!-- <table class="table" id="foods">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Exercise</th>
+                <th>Time</th>
+                <th>Calories Eaten</th>
+              </tr>
+            </thead>
+          </table>
+          <br>
+
+          <table class="table" id="exercises">
+           
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Food</th>
+                  <th>Serving</th>
+                  <th>Calories Burned</th>
+                </tr>
+              </thead>
+              <tbody>
+              <tr>
+              
+                <td></td>
+              </tr>
+            
+            </tbody>
+          </table>
+ -->
+
+
         </div>
       </div>
     </div>
+    </div>
 
     </div>
-    <footer class="footer">
+    <!-- <footer class="footer hero-foot">
       <div class="content has-text-centered">
         <p>
-          <strong> © 2020 Thomas Argent, Alexander Garcia, Sharon Yelverton, Matt Dominick
+          <strong style="color: #4d6a1b;"> © 2020 Thomas Argent, Alexander Garcia, Sharon Yelverton, Matt Dominick
           </strong>
 
         </p>
       </div>
-    </footer>
+    </footer> -->
 
   </section>
   <!-- <script src="bulma.js"></script> -->

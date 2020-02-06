@@ -1,18 +1,14 @@
 
-.hero.is-info{
-    background: url('../assets/images/background.jpg')center center; background-size:cover; 
-    background: -webkit-linear-gradient(rgba(68, 40, 40, 0), rgb(228, 191, 157));
-    
-}
-/* .signin {
-    background-color: orange;
-} */
 .hero.is-info .title  {
     color: white;
     font-size: 100px;
     font-weight: 600px;
     font-family: 'Bangers', cursive;
  
+}
+.signupTitle{
+    font-size: 90px;
+    color: green
 }
 #entersite {
     width: 200px;
