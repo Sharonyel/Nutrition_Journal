@@ -1,7 +1,6 @@
 body {
     min-height: 100vh;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    
   }
 
 
@@ -63,14 +62,28 @@ body {
         height: 100%;
         
     }
-    
-    .hero.is-info {
-        background: url('../images/image.jpg'); 
+    .hero-body {
+        background: url('../images/image2.jpg'); 
         background-size: cover;
     }
 
+    span {
+        font-style: inherit;
+        font-weight: inherit;
+        color: #4d6a1b;
+    }
+    .hero .tabs ul {
+        border-bottom: none;
+        background-color: #192710;
+    }
+
+    .hero.is-info {
+        background-color: white;
+        color: black;
+    }
+
     .footer {
-        background-color: #fafafa;
+        background-color: #192710;
         padding: 3rem 1.5rem 6rem;
         position: fixed;
         bottom: 0;
@@ -83,7 +96,7 @@ body {
     }
 
     .hero.is-info .title  {
-        color: black;
+        color: #4d6a1b;
         font-size: 35px;
        
      
@@ -136,6 +149,7 @@ body {
         font-weight: 600;
         text-align: center;
     }
+    
     
     
     /*MEDIA QUERIES*/
