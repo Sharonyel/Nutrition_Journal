@@ -23,7 +23,7 @@ body {
     }
     .tab-pane.is-active {
     display: block;
-    width: 50%;
+    /* width: 50%; */
     position: relative;
     left: 50%;
     transform: translateX(-50%);
@@ -161,6 +161,21 @@ body {
         font-co
     } */
     
+    .exerciseInfo{
+        text-align: center;
+        font-size: 25px;
+    }
+
+    .exerciseSubmit{
+        text-align: center;
+        font-size: 25px;
+    }
+    #exerciseTitle{
+        font-size: 25px;
+    }
+     #foodSearch{
+         font-size: 25px;
+     }
     
     /*MEDIA QUERIES*/
     @media screen and(max-width:760px){

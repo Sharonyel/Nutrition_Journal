@@ -23,6 +23,7 @@ $(document).on("change", "input.unitQuantityBox", function(event){
     console.log("cal ", cal);
     console.log("amount ", amount);
     document.querySelector("#quantity").textContent = (amount * serving);
+   
 })
 
 // function test() {
@@ -125,7 +126,7 @@ function foodAjax() {
         document.querySelector("#name").textContent = foodSearch;
         document.querySelector("#calories1").textContent = calories;
         document.querySelector("#quantity").textContent = serving;
-        
+        document.querySelector(".foodSubmit").classList.add('hidden');
 
 
         $('#img1').nutritionLabel({
@@ -215,10 +216,11 @@ function workoutInfo() {
         inverseToday = yyyy + '-' + mm + '-' + dd
         // document.write(today);
 
-        document.querySelector("#date").textContent= "Date: "+ today
-        document.querySelector("#workoutLength").textContent = "Workout Length: " + time + " minutes"
-        document.querySelector("#workoutInfo").textContent = "Workout : " + workout
-        document.querySelector("#calories").textContent = "Calories: " + response.exercises[0].nf_calories
+        document.querySelector("#date").textContent=  today
+        document.querySelector("#workoutLength").textContent = time + " minutes"
+        document.querySelector("#workoutInfo").textContent = workout
+        document.querySelector("#calories").textContent = response.exercises[0].nf_calories
         document.querySelector(".exerciseInfo").classList.remove('hidden');
+        document.querySelector(".exerciseSubmit").classList.add('hidden');
     });
 }
