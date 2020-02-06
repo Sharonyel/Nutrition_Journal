@@ -36,11 +36,16 @@ if (foodButton) {
       event.preventDefault();
       foodSearch = $('#input').val();
       
+      if(foodSearch !== ''){
+        foodAjax()
+        picture();
+        document.querySelector(".foodSrchInfo").classList.remove('hidden');
+      } else alert("Enter a Food!")
+
+
       console.log(foodSearch);
       
-      foodAjax()
-      picture();
-
+      
   })
 };
 
@@ -53,9 +58,14 @@ if (workoutButton) {
       workout = $('#workout').val().trim();
       time = $('#time').val().trim();
       exeInput = workout +" "+ time +" minutes"
+      if(workout !== '' && time !== ''){
+        workoutInfo();
+      } else alert("Enter all info!")
+
+      
       console.log(today);
       console.log(workout);
-      workoutInfo();
+      
 
   })
 };
@@ -75,7 +85,7 @@ if (exerciseLogButton) {
       
       
       handleFormSubmit();
-
+      exerciseSubmitted();
   })
 };
 
@@ -149,3 +159,7 @@ function submitPostFood(post) {
   )};
 
 
+function exerciseSubmitted() {
+  document.querySelector(".exerciseInfo").classList.add('hidden');
+  document.querySelector(".exerciseSubmit").classList.remove('hidden');
+}
