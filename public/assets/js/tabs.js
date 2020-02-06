@@ -147,7 +147,7 @@ function submitFood() {
 
 
   console.log(newPost);
-
+  foodSubmitted()
     submitPostFood(newPost);
 
 }
@@ -163,3 +163,9 @@ function exerciseSubmitted() {
   document.querySelector(".exerciseInfo").classList.add('hidden');
   document.querySelector(".exerciseSubmit").classList.remove('hidden');
 }
+
+function foodSubmitted(){
+  document.querySelector(".foodSrchInfo").classList.add('hidden');
+  document.querySelector(".foodSubmit").classList.remove('hidden');
+}
+

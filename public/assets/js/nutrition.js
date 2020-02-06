@@ -126,7 +126,7 @@ function foodAjax() {
         document.querySelector("#name").textContent = foodSearch;
         document.querySelector("#calories1").textContent = calories;
         document.querySelector("#quantity").textContent = serving;
-        
+        document.querySelector(".foodSubmit").classList.add('hidden');
 
 
         $('#img1').nutritionLabel({
