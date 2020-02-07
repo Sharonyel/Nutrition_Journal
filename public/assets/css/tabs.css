@@ -1,197 +1,208 @@
 body {
-    min-height: 100vh;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-  }
+  min-height: 100vh;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin-top: -30px;
+}
 
-.signupTitle{
-    font-size: 90px;
-    color: green
+.signupTitle {
+  font-size: 50px;
+  color: green;
+  text-align: center;
 }
 #entersite {
-    width: 200px;
-    align-content: center;
+  width: 200px;
+  align-content: center;
 }
 .modal {
-    width: 100px;
-    height: 100px;
+  width: 100px;
+  height: 100px;
 }
 
 .tabs {
-    margin-bottom: -1px !important;
-    position: relative;
-    }
-    .tab-content {
-    padding: 60px;
-    top: 197px;
-    color: #000;
-    background-color: white;
-    text-align: justify;
-    margin-bottom: 100px;
-    
-    }
-    .tab-pane {
-    display: none;
-    
-    }
-    .tab-pane.is-active {
-    display: block;
-    width: 50%;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    
-    }
-    .is-active {
-    display: initial;
-    }
-    
-    .cent{
-    display: block;
-    margin: 10px auto;
-    padding: 5px;
-    border: 1px solid #ccc}
-    
-    .video
-    {display: block;
-    margin: 0 auto;}
-    
-    /* CSS from http://embedresponsively.com */
-    .embed-container {
-        position: relative;
-        padding-bottom: 56.25%;
-        height: 0;
-        overflow: hidden;
-        max-width: 100%;
-        
-    }
-    .embed-container iframe,
-    .embed-container object,
-    .embed-container embed {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        
-    }
-
-    .hero-body {
-        background: url('../images/image2.jpg'); 
-        background-size: cover;
-    }
-
-    span {
-        font-style: inherit;
-        font-weight: inherit;
-        /* color: #4d6a1b; */
-        color: black;
-    }
-    .hero .tabs ul {
-        border-bottom: none;
-        background-color: #192710;
-    }
-
-    .hero.is-info {
-        background-color: white;
-        color: black;
-    }
-
-    .footer {
-        background-color: #192710;
-        padding: 3rem 1.5rem 6rem;
-        position: fixed;
-        bottom: 0;
-        height: 10px;
-        width: 100%;
-        border: 1px solid aqua;
-        padding-bottom: 2.5rem;
-        text-align: center;
-        
-    }
-
-    .hero.is-info .title  {
-        /* color: #4d6a1b; */
-        font-size: 35px;
-        color: black;
-     
-    }
-
-    #time {
-        margin-right: 20px;
-    }
-    #workout{
-        margin-right: 20px;
-    }
+  margin-bottom: -1px !important;
+  position: relative;
   
-    .hidden{
-        display: none;
-    }
-    ul {
-        font-size: 25px;
-    }
-    .profile {
-        font-size: 35px;
-    }
-    .title, .user-name {
-        font-size: 60px;
-        /* color:  white; */
-    }
-    #nutFact{
-        text-align:center;
-        font-size: 30px;
-    }
-    
-    #quoteContainer{
-        width:75%;
-        background: #fff;
-        padding:10px;
-        margin:10px auto;
-        text-align: center;
-        height: 120px;
-    }
-    #buttonContainer{
-        width: 100%;
-        text-align: center;
-        padding: 5px;
-    }
-    #quoteButton{
-        display: inline-block;
-        margin-left: 300px;
-    }
-    #quoteGenius{
-        font-style: italic;
-        font-weight: 600;
-        text-align: center;
-    }
-    /* td{
+}
+
+.tab-content {
+  padding: 60px;
+  top: 197px;
+  color: #000;
+  background-color: white;
+  text-align: justify;
+  margin-bottom: 100px;
+}
+
+.tab-pane {
+  display: none;
+}
+.tab-pane.is-active {
+  display: block;
+  width: 50%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.is-active {
+  display: initial;
+}
+
+.cent {
+  display: block;
+  margin: 10px auto;
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+
+.video {
+  display: block;
+  margin: 0 auto;
+}
+
+/* CSS from http://embedresponsively.com */
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-body {
+  background: url("../images/image2.jpg");
+  background-size: cover;
+}
+.logout{
+    margin-top: 10px;
+    color:white;
+    font-size:15px;
+    position: absolute;
+    background: #192710;
+    top: 0;
+    right: 0;
+    margin-right: 10px;
+}
+span {
+  font-style: inherit;
+  font-weight: inherit;
+  color: #4d6a1b;
+  /* color: black; */
+}
+.hero .tabs ul {
+  border-bottom: none;
+  background-color: #192710;
+}
+
+.hero.is-info {
+  background-color: white;
+  color: black;
+}
+
+.footer {
+  background-color: #192710;
+  padding: 3rem 1.5rem 6rem;
+  position: fixed;
+  bottom: 0;
+  height: 10px;
+  width: 100%;
+  border: 1px solid aqua;
+  padding-bottom: 2.5rem;
+  text-align: center;
+}
+
+.hero.is-info .title {
+  /* color: #4d6a1b; */
+  font-size: 35px;
+  color: black;
+}
+
+#time {
+  margin-right: 20px;
+}
+#workout {
+  margin-right: 20px;
+}
+
+.hidden {
+  display: none;
+}
+ul {
+  font-size: 25px;
+}
+.profile {
+  font-size: 35px;
+}
+.title,
+.user-name {
+  font-size: 60px;
+  /* color:  white; */
+}
+#nutFact {
+  text-align: center;
+  font-size: 30px;
+}
+
+#quoteContainer {
+  width: 75%;
+  background: #fff;
+  padding: 10px;
+  margin: 10px auto;
+  text-align: center;
+  height: 120px;
+}
+#buttonContainer {
+  width: 100%;
+  text-align: center;
+  padding: 5px;
+}
+#quoteButton {
+  display: inline-block;
+  margin-left: 300px;
+}
+#quoteGenius {
+  font-style: italic;
+  font-weight: 600;
+  text-align: center;
+}
+/* td{
         width: 25px;
     } */
-    /* ul {
+/* ul {
         font-weight: bold;
     } */
-    /* #welcome {
+/* #welcome {
         font-co
     } */
-    
-    .exerciseInfo{
-        text-align: center;
-        font-size: 25px;
-    }
 
-    .exerciseSubmit{
-        text-align: center;
-        font-size: 25px;
-    }
-    #exerciseTitle{
-        font-size: 25px;
-    }
-     #foodSearch{
-         font-size: 25px;
-     }
-    
-    /*MEDIA QUERIES*/
-    @media screen and(max-width:760px){
-        #quoteButton,#addNew{
-            display: block;
-        }
-    }
+.exerciseInfo {
+  text-align: center;
+  font-size: 25px;
+}
+
+.exerciseSubmit {
+  text-align: center;
+  font-size: 25px;
+}
+#exerciseTitle {
+  font-size: 25px;
+}
+#foodSearch {
+  font-size: 25px;
+}
+
+/*MEDIA QUERIES*/
+@media screen and(max-width:760px) {
+  #quoteButton,
+  #addNew {
+    display: block;
+  }
+}
