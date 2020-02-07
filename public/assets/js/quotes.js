@@ -46,7 +46,10 @@ $(document).ready(function(){
     }
 
 ];
-    $( window ).on( "load", function() {
+
+    setInterval(quotes,7000);
+    $(document).ready(quotes);
+    function quotes() {
         var sourceLength = quoteSource.length;
         var randomNumber= Math.floor(Math.random()*sourceLength);
         var newQuoteText = quoteSource[randomNumber].quote;
@@ -64,7 +67,7 @@ $(document).ready(function(){
 
     console.log( "window loaded" );
         });
-    })
+    }
 
     $('#quoteButton').click(function(event){
         event.preventDefault();
