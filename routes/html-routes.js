@@ -8,15 +8,17 @@ module.exports = function(app){
       });
 
       app.get("/welcome", isAuthenticated, function(req, res) {
-        res.sendFile(path.join(__dirname, "../public/welcome.html"));
+        res.render("welcome");
       });
 
       app.get("/signup", function(req, res) {
-        res.sendFile(path.join(__dirname, "../public/signup.html"));
+        res.render("signup");
+        // res.sendFile(path.join(__dirname, "../public/signup.html"));
       });
 
       app.get("/login", function(req, res) {
-        res.sendFile(path.join(__dirname, "../public/login.html"));
+        res.render("login")
+        // res.sendFile(path.join(__dirname, "../public/login.html"));
       });
 
 
