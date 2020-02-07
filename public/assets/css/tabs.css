@@ -23,7 +23,7 @@ body {
     }
     .tab-pane.is-active {
     display: block;
-    /* width: 50%; */
+    width: 50%;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
@@ -65,14 +65,14 @@ body {
 
     .hero-body {
         background: url('../images/image2.jpg'); 
-
         background-size: cover;
     }
 
     span {
         font-style: inherit;
         font-weight: inherit;
-        color: #4d6a1b;
+        /* color: #4d6a1b; */
+        color: black;
     }
     .hero .tabs ul {
         border-bottom: none;
@@ -98,9 +98,9 @@ body {
     }
 
     .hero.is-info .title  {
-        color: #4d6a1b;
+        /* color: #4d6a1b; */
         font-size: 35px;
-       
+        color: black;
      
     }
 
