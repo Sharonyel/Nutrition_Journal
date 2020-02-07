@@ -174,7 +174,7 @@ function workoutInfo() {
         "weight_kg": ${weightKg},
         "height_cm": ${heightCm},
         "age": ${age}}`;
-    console.log(data)
+    // console.log(data)
     let exercise = {
         "async": true,
         "crossDomain": true,

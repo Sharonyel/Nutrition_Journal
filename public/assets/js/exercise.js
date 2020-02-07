@@ -13,7 +13,7 @@ $(document).ready(function () {
     $(document).on("click", "#user-signup", handleUserSignUp);
   
     function handleUserSignUp(event) {
-      console.log("clicked")
+      // console.log("clicked")
       event.preventDefault();
       
       // 
@@ -34,7 +34,7 @@ $(document).ready(function () {
   
     // A function for creating an author. Calls getAuthors upon completion
     function enterUser(userData) {
-      console.log(userData)
+      // console.log(userData)
       $.post("/api/users", userData)
   
     }
