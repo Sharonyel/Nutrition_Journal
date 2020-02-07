@@ -51,9 +51,7 @@
               </p>
             </div>
             <div class="column">
-
-              <h2 id="nutFact"><strong>Nutrition Quote</strong></h2>
-
+              <h2 id="nutFact"><strong>Nutrition Quote</strong><h2>
               <div id="quoteContainer">
                 <p id="quoteGenius"></p>
               </div>
@@ -61,36 +59,35 @@
                   <a class="button is-info is-medium is-centered" id="quoteButton">OK</a>
                   </a>
                 </p> -->
-
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+    
 
 
-  <div class="tab-pane" id="pane-3" style="display: none;">
-    <div class="card large">
-      <div class="card-content">
-        <div class="columns">
-          <div class="column">
+    <div class="tab-pane" id="pane-3" style="display: none;">
+      <div class="card large">
+        <div class="card-content">
+          <div class="columns">
+            <div class="column">
 
-            <h1 id="exerciseTitle">Enter your workout details!</h1>
-            <br>
-            <div class="field is-grouped is-grouped is-grouped-multiline">
-              <p class="control is-expanded">
-                <input class="input is-large" id="time" placeholder="Enter workout time in minutes">
-              </p>
+              <h1 id="exerciseTitle">Enter your workout details!</h1>
+              <br>
+              <div class="field is-grouped is-grouped is-grouped-multiline">
+                <p class="control is-expanded">
+                  <input class="input is-large" id="time" placeholder="Enter workout time in minutes">
+                </p>
 
-              <p class="control is-expanded is-grouped is-grouped-multiline">
-                <input class="input is-large" id="workout" placeholder="Enter workout">
-              </p>
-              <p class="control">
-                <a class="button is-info is-large" id="workoutButton">
+                <p class="control is-expanded is-grouped is-grouped-multiline">
+                  <input class="input is-large" id="workout" placeholder="Enter workout">
+                </p>
+                <p class="control">
+                  <a class="button is-info is-large" id="workoutButton">
                   Search
-                </a>
-              </p>
+                  </a>
+                </p>
             </div>
             <br>
             <br>
@@ -107,10 +104,10 @@
 
 
 
-              </div>
-              <div class="exerciseSubmit hidden is-centered">
+            </div>
+            <div class="exerciseSubmit hidden is-centered">
                 <p>Your exercise has been logged.</p>
-              </div>
+            </div>
 
 
             </div>
@@ -123,125 +120,125 @@
 
       </div>
     </div>
-  </div>
+    
 
 
-  <div class="tab-pane is-active " id="pane-2" style="display: none;">
-    <div class="card large">
-      <div class="card-content">
+    <div class="tab-pane is-active " id="pane-2" style="display: none;">
+      <div class="card large">
+        <div class="card-content">
 
-        <div class="columns">
-          <div class="column">
-            <h1 id="foodSearch">Search our database of foods</h1>
-            <br>
-            <div class="field is-grouped is-grouped-multiline">
-              <p class="control">
+          <div class="columns">
+            <div class="column">
+              <h1 id="foodSearch">Search our database of foods</h1>
+              <br>
+              <div class="field is-grouped is-grouped-multiline">
+                <p class="control">
                 <input class="input is-large" id="input" type="text" value="" placeholder="Search Food">
-              </p>
-              <p class="control">
+                </p>
+                <p class="control">
                 <a class="button is-info is-large" id="foodButton">
                   Search
                 </a>
-              </p>
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-        <br>
-        <div class="foodSrchInfo hidden">
-          <div class="columns">
-            <div class="column" id="img1">
+          <br>
+          <div class="foodSrchInfo hidden">
+            <div class="columns">
+              <div class="column" id="img1">
 
-            </div>
-            <div class="column">
-              <p></p>
-              <span>Name: </span><span id="name"></span>
-              <p></p>
-              <span>Calories: </span><span id="calories1"></span>
-              <p></p>
-              <span>Quantity: </span><span id="quantity"></span>
-              <p class="control">
+              </div>
+              <div class="column">
+                <p></p>
+                <span>Name: </span><span id="name"></span>
+                <p></p>
+                <span>Calories: </span><span id="calories1"></span>
+                <p></p>
+                <span>Quantity: </span><span id="quantity"></span>
+                <p class="control">
                 <a class="button is-info is-large" id="logButton">
                   Log
                 </a>
-              </p>
-              <div><img id='img2' height='140px' width='200px' src=''></div>
+                </p>
+                <div><img id='img2' height='140px' width='200px' src=''></div>
+              </div>
+
             </div>
 
           </div>
-
-        </div>
         <div class="foodSubmit hidden is-centered">
           <p>Great Job! Your food has been submitted.</p>
         </div>
 
       </div>
-      <div><img id='img2' height='140px' width='200px' src=''></div>
-    </div>
-  </div>
-
-  </div>
-
-  <div class="tab-pane is-active" id="pane-4" style="display: none;">
-    <div class="card large">
-      <div class="card-content">
-        <div>
-          <h1>Your Information</h1>
-        </div>
-
-        <br>
-        <br>
-        <div class="columns">
-          <div class="column">
-            Date
-            <ul id="exercises">
-              {{#each this.exercise}}
-             <li>{{date}}</li>
-              {{/each}}
-            </ul>
-          </div>
-          <div class="column">
-            Exercise
-             <ul id="exercises">
-              {{#each this.exercise}}
-              <li>{{exercise_name}}</li>
-              {{/each}}
-            </ul>
-          </div>
-          <div class="column">
-            Duration
-             <ul id="exercises">
-              {{#each this.exercise}}
-              <li>{{duration}}</li>
-              {{/each}}
-            </ul>
-          </div>
-
-          <div class="column">
-            Calories Burned
-             <ul id="exercises">
-              {{#each this.exercise}}
-              <li>{{calories_burned}}</li>
-              {{/each}}
-            </ul>
-          </div>
-        </div>
-
-
-
-        <br>
-        <ul id="foods">
-          {{#each this.food}}
-          {{date}}
-          {{food_name}}
-          {{servings}}
-          {{calories}}
-          {{/each}}
-        </ul>
-
-
+        <div><img id='img2' height='140px' width='200px' src=''></div>
       </div>
     </div>
-  </div>
+
+    
+
+    <div class="tab-pane is-active" id="pane-4" style="display: none;">
+      <div class="card large">
+        <div class="card-content">
+          <div>
+            <h1>Your Information</h1>
+          </div>
+
+          <br>
+          <br>
+          <div class="columns">
+            <div class="column">
+              Date
+              <ul id="exercises">
+                {{#each this.exercise}}
+              <li>{{date}}</li>
+                {{/each}}
+              </ul>
+            </div>
+            <div class="column">
+              Exercise
+              <ul id="exercises">
+                {{#each this.exercise}}
+                <li>{{exercise_name}}</li>
+                {{/each}}
+              </ul>
+            </div>
+            <div class="column">
+              Duration
+              <ul id="exercises">
+                {{#each this.exercise}}
+                <li>{{duration}}</li>
+                {{/each}}
+              </ul>
+            </div>
+
+            <div class="column">
+              Calories Burned
+              <ul id="exercises">
+                {{#each this.exercise}}
+                <li>{{calories_burned}}</li>
+                {{/each}}
+              </ul>
+            </div>
+          </div>
+
+
+
+          <br>
+          <ul id="foods">
+            {{#each this.food}}
+            {{date}}
+            {{food_name}}
+            {{servings}}
+            {{calories}}
+            {{/each}}
+          </ul>
+
+
+        </div>
+      </div>
+    </div>
   </div>
 
   </div>
