@@ -185,7 +185,14 @@
 
           <br>
           <br>
-          <ul id= "exercises"></ul>
+          <ul id= "exercises">
+            {{#each exercise}}
+            {{date}} 
+            {{exercise_name}}
+            {{duration}}
+            {{calories_burned}}
+            {{/each}}
+          </ul>
           <br>
           <ul id= "foods"></ul>
          

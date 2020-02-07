@@ -1,5 +1,8 @@
+
+
 var path = require("path");
 var isAuthenticated = require("../config/middleware/isAuthenticated");
+var db = require("../models");
 
 module.exports = function(app){
 
@@ -8,7 +11,26 @@ module.exports = function(app){
       });
 
       app.get("/welcome", isAuthenticated, function(req, res) {
-        res.render("welcome");
+        
+        var query = {};
+        if (req.user.id) {
+            query.UserId = req.user.id;
+        }
+
+        db.Exercise.findAll({
+            where: query,
+           
+        }).then(function (data) {
+          var exercise = {
+            exercise: data
+          }
+        console.log(exercise)
+          res.render("welcome", exercise);
+          // res.json(dbExercise);
+        });
+
+
+        
       });
 
       app.get("/signup", function(req, res) {

@@ -43,7 +43,7 @@ if (foodButton) {
       } else alert("Enter a Food!")
 
 
-      console.log(foodSearch);
+      // console.log(foodSearch);
       
       
   })
@@ -63,8 +63,8 @@ if (workoutButton) {
       } else alert("Enter all info!")
 
       
-      console.log(today);
-      console.log(workout);
+      // console.log(today);
+      // console.log(workout);
       
 
   })
@@ -77,11 +77,11 @@ if (exerciseLogButton) {
 
       event.preventDefault();
       
-      console.log(time);
-      console.log(workout);
-      console.log(exeInput)
-      console.log(inverseToday);
-      console.log(calories)
+      // console.log(time);
+      // console.log(workout);
+      // console.log(exeInput)
+      // console.log(inverseToday);
+      // console.log(calories)
       
       
       handleFormSubmit();
@@ -104,14 +104,14 @@ function handleFormSubmit() {
   };
 
 
-  console.log(newPost);
+  // console.log(newPost);
 
     submitPost(newPost);
 
 }
 // Submits a new post and brings user to blog page upon completion
 function submitPost(post) {
-  console.log(post);
+  // console.log(post);
   $.post("/api/exercises", post
     
   )};
@@ -146,14 +146,14 @@ function submitFood() {
   };
 
 
-  console.log(newPost);
+  // console.log(newPost);
   foodSubmitted()
     submitPostFood(newPost);
 
 }
 // Submits a new post and brings user to blog page upon completion
 function submitPostFood(post) {
-  console.log(post);
+  // console.log(post);
   $.post("/api/foods", post
     
   )};
