@@ -9,7 +9,7 @@
     <title>Landing</title>
     <link href="https://fonts.googleapis.com/css?family=Questrial&amp;display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery.js"></script>
-    ​
+    ​<link href="https://fonts.googleapis.com/css?family=Rock+Salt&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/bulma@0.8.0/css/bulma.min.css">
     <!-- <link rel="stylesheet" type="css" href="/assets/css/style.css" /> -->
     <!-- <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script> -->
@@ -23,23 +23,18 @@
         background-size: cover;
     }
 
-    h1 {
+    .title {
         color: red;
-        font-size: 130px;
+        font-size: 100px;
         text-align: center;
-        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-family: 'Rock Salt', cursive;
         margin-top: 100px;
     }
-
-    #journal {
-        color: red;
-        font-size: 120px;
-        text-align: center;
-        font-family: Georgia, 'Times New Roman', Times, serif;
-        margin: 10px;
-        line-height: 10px;
-    }
-
+    @media ( max-width: 720px ) {
+    .title {
+    font-size: 50px;
+  }
+ }
 
     .field.is-grouped {
         padding-top: 60px;
@@ -47,26 +42,28 @@
 </style>
 
 <body>
-    <div class="container is-fluid is-widescreen">
-        <h1 class="is centered has-text-weight-bold is-italic">Nutrition</h1>
-        <h1 class="is centered has-text-weight-bold" id="journal">Journal </h1>
+    <section class="section">
+        <div class="container is-fluid is-widescreen">
+            <h1 class=" title is centered has-text-weight-bold is-italic">Nutrition</h1>
+            <h1 class=" title is centered has-text-weight-bold">Journal </h1>
+        </div>​
+    </section>
+  
+    <div class="field is-grouped is-grouped-centered">
+        <p class="control">
+            <button class="button is-large loginBtn"><a href="/login">Login</a>
+            </button>
+        </p>
 
-        <br><br>
-        <div class="field is-grouped is-grouped-centered">
-                    <p class="control">
-                        <button class="button is-large loginBtn"><a href="/login">Login</a>
-                        </button>
-                    </p>
-               
-                    <p class="control">
-                        <button class="button is-large signupBtn"><a href="/signup">Sign Up</a>
-                        </button>
-                    </p>
-                </div>
-       
+        <p class="control">
+            <button class="button is-large signupBtn"><a href="/signup">Sign Up</a>
+            </button>
+        </p>
+    </div>
 
-        <script type="text/javascript" src="assets/js/login.js"></script>
-        ​
+
+    <script type="text/javascript" src="assets/js/login.js"></script>
+
 </body>
 ​
 

@@ -2,7 +2,12 @@ body {
     min-height: 100vh;
     font-family: Georgia, 'Times New Roman', Times, serif;
   }
-
+.tabText {
+    color: black;
+}
+.icon_is-small {
+    color: #4D6A1B;
+}
 .signupTitle{
     font-size: 90px;
     color: green
@@ -88,7 +93,7 @@ body {
     }
     .hero .tabs ul {
         border-bottom: none;
-        background-color: #192710;
+        background-color: green;
     }
 
     .hero.is-info {
