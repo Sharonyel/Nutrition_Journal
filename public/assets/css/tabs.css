@@ -3,6 +3,18 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
   }
 
+.signupTitle{
+    font-size: 90px;
+    color: green
+}
+#entersite {
+    width: 200px;
+    align-content: center;
+}
+.modal {
+    width: 100px;
+    height: 100px;
+}
 
 .tabs {
     margin-bottom: -1px !important;
@@ -121,7 +133,7 @@ body {
         font-size: 35px;
     }
     .title, .user-name {
-        font-size: 80px;
+        font-size: 60px;
         /* color:  white; */
     }
     #nutFact{
