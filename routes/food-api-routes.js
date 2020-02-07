@@ -2,7 +2,7 @@ var db = require("../models");
 module.exports = function (app) {
 
     app.get("/api/foods", function (req, res) {
-        console.log(req.user)
+        // console.log(req.user)
         var query = {};
         if (req.user.id) {
             query.UserId = req.user.id;
