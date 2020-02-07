@@ -11,7 +11,7 @@ module.exports = function(app){
       });
 
       app.get("/welcome", isAuthenticated, function(req, res) {
-        
+        var exercise
         var query = {};
         if (req.user.id) {
             query.UserId = req.user.id;
@@ -21,14 +21,29 @@ module.exports = function(app){
             where: query,
            
         }).then(function (data) {
-          var exercise = {
-            exercise: data
-          }
-        console.log(exercise)
-          res.render("welcome", exercise);
-          // res.json(dbExercise);
+            exercise = data
+      
+
         });
 
+        var query = {};
+        if (req.user.id) {
+            query.UserId = req.user.id;
+        }
+
+        db.Food.findAll({
+            where: query,
+           
+        }).then(function (data) {
+          var hbdata = {
+            food: data,
+            exercise: exercise
+          }
+          
+           res.render("welcome", hbdata);
+        });
+
+      
 
         
       });
