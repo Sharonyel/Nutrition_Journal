@@ -6,7 +6,15 @@ $(document).ready(function() {
     var errmess;
 
 
-    userLogin.on("click", function(event) {
+    userLogin.on("click",initlogin);
+    document.addEventListener("keyup", function(event){
+      if(event.keyCode === 13){
+        userLogin.click();
+      }
+    });
+    
+    
+    function initlogin(event) {
         event.preventDefault();
        
         var loginData = {
@@ -21,7 +29,7 @@ $(document).ready(function() {
         loginUser(loginData.user_name, loginData.password);
         userName.val("");
         passWord.val("");
-    });
+    };
 
   
 
