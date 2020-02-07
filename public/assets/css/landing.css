@@ -1,0 +1,32 @@
+    body {
+        min-height: 100vh;
+        width: 100%;
+        background-image: url('assets/images/carrots.jpg');
+        background-size: cover;
+    }
+
+    h1 {
+        color: red;
+        font-size: 130px;
+        text-align: center;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        margin-top: 100px;
+        /* line-height: 20px; */
+    }
+
+    #journal {
+        color: red;
+        font-size: 120px;
+        text-align: center;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        margin: 10px;
+        line-height: 10px;
+    }
+
+    .btns {
+        text-align: center;
+    }
+    .field.is-grouped{
+        margin-right: 500px;
+        padding-top: 60px;
+    }
