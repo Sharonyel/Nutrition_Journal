@@ -57,6 +57,10 @@ module.exports = function(app){
         res.render("login")
         // res.sendFile(path.join(__dirname, "../public/login.html"));
       });
+      app.get('/logout', function(req, res){
+        req.logout();
+        res.redirect('/');
+      });
 
 
 };
