@@ -25,14 +25,14 @@ $(document).ready(function() {
     //     <td>${data[i].calories_burned}</td>`);
     //   }
     // })
-    $.get("/api/foods").then(function(data) {
-      // console.log(data);
-      for(i=0; i< data.length; i++){      
+    // $.get("/api/foods").then(function(data) {
+    //   // console.log(data);
+    //   for(i=0; i< data.length; i++){      
        
-        $("#foods").append(`<li>${data[i].date}  ${data[i].food_name} Servings: ${data[i].servings}, ${data[i].calories} Calories </li>`);
-      }
+    //     $("#foods").append(`<li>${data[i].date}  ${data[i].food_name} Servings: ${data[i].servings}, ${data[i].calories} Calories </li>`);
+    //   }
 
-    })
+    // })
     // $.get("/api/exercises").then(function(data) {
     //   console.log(data);
     //   for(i=0; i< data.length; i++){      
