@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-  var Exercise = sequelize.define("Exercise", {
+  var Exercise = sequelize.define('Exercise', {
     id: {
       type: DataTypes.INTEGER,
       autoIncrement: true,
@@ -43,7 +43,7 @@ module.exports = function (sequelize, DataTypes) {
         allowNull: false
       }
     });
-  }
+  };
 
   return Exercise;
 };
