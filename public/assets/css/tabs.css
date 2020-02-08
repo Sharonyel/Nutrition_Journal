@@ -39,12 +39,12 @@ body {
     position: relative;
     }
     .tab-content {
-    padding: 60px;
+    /* padding: 60px;
     top: 197px;
     color: #000;
     background-color: white;
     text-align: justify;
-    margin-bottom: 100px;
+    margin-bottom: 100px; */
     
     }
     .tab-pane {
@@ -199,6 +199,7 @@ body {
     right: 0;
     margin-right: 10px;
 }
+
 span {
   font-style: inherit;
   font-weight: inherit;
@@ -308,6 +309,16 @@ ul {
 }
 .profile1{
     text-align: center;
+}
+
+#pane-4{
+    width: 100%;
+    height: 100%;
+    
+}
+
+#exercises, #foods{
+    font-size: 10px;
 }
 /*MEDIA QUERIES*/
 @media screen and(max-width:760px) {
