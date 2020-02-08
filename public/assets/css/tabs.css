@@ -38,15 +38,7 @@ body {
     margin-bottom: -1px !important;
     position: relative;
     }
-    .tab-content {
-    /* padding: 60px;
-    top: 197px;
-    color: #000;
-    background-color: white;
-    text-align: justify;
-    margin-bottom: 100px; */
-    
-    }
+   
     .tab-pane {
     display: none;
     
@@ -199,7 +191,10 @@ body {
     right: 0;
     margin-right: 10px;
 }
-
+#flexfix{
+  display: flex;
+  flex-direction: row;
+}
 span {
   font-style: inherit;
   font-weight: inherit;
