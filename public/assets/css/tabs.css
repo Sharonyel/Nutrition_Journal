@@ -103,19 +103,7 @@ body {
         color: black;
     }
 
-    .footer {
-        background-color: #192710;
-        padding: 3rem 1.5rem 6rem;
-        position: fixed;
-        bottom: 0;
-        height: 10px;
-        width: 100%;
-        border: 1px solid aqua;
-        padding-bottom: 2.5rem;
-        text-align: center;
-        
-    }
-
+    
     .hero.is-info .title  {
         /* color: #4d6a1b; */
         font-size: 35px;
@@ -131,7 +119,7 @@ body {
     }
 
   
-}
+
 
 .tab-content {
   padding: 60px;
@@ -216,12 +204,12 @@ span {
   color: black;
 }
 
-.footer {
+.nonfooter {
   background-color: #192710;
-  padding: 3rem 1.5rem 6rem;
+  /* padding: 3rem 1.5rem 6rem; */
   position: fixed;
   bottom: 0;
-  height: 10px;
+  height: 1px;
   width: 100%;
   border: 1px solid aqua;
   padding-bottom: 2.5rem;
