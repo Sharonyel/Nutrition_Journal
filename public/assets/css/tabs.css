@@ -3,6 +3,7 @@ body {
   min-height: 100vh;
   font-family: Georgia, "Times New Roman", Times, serif;
   margin-top: -30px;
+  margin-bottom: -30px;
 }
 
 .signupTitle {
@@ -10,6 +11,16 @@ body {
   color: green;
   text-align: center;
 
+}
+.welcomeUser{
+    padding:20px;
+    background: #192710;
+    text-align: center;
+    width: 50%;
+}
+
+.signup{
+    margin-top: 100px;
 }
 #entersite {
   width: 200px;
