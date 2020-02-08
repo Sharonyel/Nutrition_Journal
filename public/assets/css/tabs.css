@@ -10,6 +10,7 @@ body {
   height: 100%;
 }
 
+
 .signupTitle {
   font-size: 50px;
   color: green;
@@ -302,6 +303,7 @@ ul {
 }
 #exerciseTitle {
   font-size: 25px;
+  text-align: center;
 }
 #foodSearch {
   font-size: 25px;
