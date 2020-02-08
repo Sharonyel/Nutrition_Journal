@@ -137,7 +137,7 @@ function submitFood() {
   // Constructing a newPost object to hand to the database
   var newPost = {
     food_name: foodSearch,
-    servings: serving,
+    servings: amount,
     calories: calories,
     date: today,
     UserId: userId.data('name')

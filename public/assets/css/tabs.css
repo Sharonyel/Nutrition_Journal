@@ -12,6 +12,16 @@ body {
   text-align: center;
 
 }
+.welcomeUser{
+    padding:20px;
+    background: #192710;
+    text-align: center;
+    width: 50%;
+}
+
+.signup{
+    margin-top: 100px;
+}
 #entersite {
   width: 200px;
   align-content: center;
@@ -296,7 +306,9 @@ ul {
 #foodSearch {
   font-size: 25px;
 }
-
+.profile1{
+    text-align: center;
+}
 /*MEDIA QUERIES*/
 @media screen and(max-width:760px) {
   #quoteButton,
