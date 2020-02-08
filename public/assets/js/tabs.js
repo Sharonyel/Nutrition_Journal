@@ -27,11 +27,16 @@ function toggleTab(selectedNav, targetId) {
   });
 }
 
+// FOOD SEARCH FUNCTION//////////////////////////////
+foodButton = $("#foodButton");
+foodButton.on("click", doFoodSearch);
+document.querySelector("#input").addEventListener("keyup", function(event){
+  if(event.keyCode === 13){
+    foodButton.click();
+  }
+});
 
-foodButton = document.querySelector("#foodButton")
-
-if (foodButton) {
-  foodButton.addEventListener("click", function (event) {
+  function doFoodSearch(event) {
 
     event.preventDefault();
     foodSearch = $('#input').val();
@@ -46,10 +51,12 @@ if (foodButton) {
     // console.log(foodSearch);
 
 
-  })
-};
+  };
+
 
 workoutButton = document.querySelector("#workoutButton")
+
+
 
 if (workoutButton) {
   workoutButton.addEventListener("click", function (event) {
@@ -156,9 +163,13 @@ function submitFood() {
 function submitPostFood(post) {
   // console.log(post);
   $.post("/api/foods", post
-
-  )
+ 
+  );
+ 
+ 
 };
+
+
 
 
 function exerciseSubmitted() {
