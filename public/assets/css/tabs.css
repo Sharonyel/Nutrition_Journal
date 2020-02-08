@@ -3,6 +3,7 @@ body {
   min-height: 100vh;
   font-family: Georgia, "Times New Roman", Times, serif;
   margin-top: -30px;
+  margin-bottom: -30px;
 }
 
 .signupTitle {
