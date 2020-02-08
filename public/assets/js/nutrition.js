@@ -64,7 +64,7 @@ function picture() {
     $.ajax(settings).done(function (response) {
         console.log(response);
         document.querySelector("#img2").setAttribute("src", response.common[0].photo.thumb)
-
+        
     });
 }
 
