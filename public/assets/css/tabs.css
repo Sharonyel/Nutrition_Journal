@@ -306,7 +306,9 @@ ul {
 #foodSearch {
   font-size: 25px;
 }
-
+.profile1{
+    text-align: center;
+}
 /*MEDIA QUERIES*/
 @media screen and(max-width:760px) {
   #quoteButton,

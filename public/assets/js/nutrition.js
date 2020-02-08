@@ -11,14 +11,14 @@ let exeInput = (time + workout);
 let today
 let calories
 let inverseToday 
-
+let amount
 
 $(document).on("change", "input.unitQuantityBox", function(event){
     event.stopPropagation();
     console.log($(this).val());
     console.log("calories ", calories);
     var cal = parseFloat(calories);
-    var amount = parseFloat($(this).val());
+    amount = parseFloat($(this).val());
     document.querySelector("#calories1").textContent = (cal * amount).toFixed(2);
     console.log("cal ", cal);
     console.log("amount ", amount);
