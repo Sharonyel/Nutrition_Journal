@@ -51,11 +51,12 @@
               </p>
             </div>
             <div class="column">
-              <h2 id="nutFact"><strong>Nutrition Quote</strong><h2>
-              <div id="quoteContainer">
-                <p id="quoteGenius"></p>
-              </div>
-              <!-- <p class="control">
+              <h2 id="nutFact"><strong>Nutrition Quote</strong>
+                <h2>
+                  <div id="quoteContainer">
+                    <p id="quoteGenius"></p>
+                  </div>
+                  <!-- <p class="control">
                   <a class="button is-info is-medium is-centered" id="quoteButton">OK</a>
                   </a>
                 </p> -->
@@ -63,9 +64,9 @@
           </div>
         </div>
       </div>
-      <div ><a class="logout button" href="/logout">Logout</a></div>
+      <div><a class="logout button" href="/logout">Logout</a></div>
     </div>
-    
+
 
 
     <div class="tab-pane" id="pane-3" style="display: none;">
@@ -86,29 +87,29 @@
                 </p>
                 <p class="control">
                   <a class="button is-info is-large" id="workoutButton">
-                  Search
+                    Search
                   </a>
                 </p>
-            </div>
-            <br>
-            <br>
-            <div class="exerciseInfo hidden">
-              <p id="date"></p>
-              <p id="workoutLength"></p>
-              <p id="workoutInfo"></p>
-              <p id="calories"></p>
+              </div>
               <br>
+              <br>
+              <div class="exerciseInfo hidden">
+                <p id="date"></p>
+                <p id="workoutLength"></p>
+                <p id="workoutInfo"></p>
+                <p id="calories"></p>
+                <br>
 
-              <a class="button is-info is-large is-centered" id="exerciseLog">
-                Log today's workout
-              </a>
+                <a class="button is-info is-large is-centered" id="exerciseLog">
+                  Log today's workout
+                </a>
 
 
 
-            </div>
-            <div class="exerciseSubmit hidden is-centered">
+              </div>
+              <div class="exerciseSubmit hidden is-centered">
                 <p>Your exercise has been logged.</p>
-            </div>
+              </div>
 
 
             </div>
@@ -120,9 +121,9 @@
         </div>
 
       </div>
-      <div ><a class="logout button" href="/logout">Logout</a></div>
+      <div><a class="logout button" href="/logout">Logout</a></div>
     </div>
-    
+
 
 
     <div class="tab-pane is-active " id="pane-2" style="display: none;">
@@ -135,12 +136,12 @@
               <br>
               <div class="field is-grouped is-grouped-multiline">
                 <p class="control">
-                <input class="input is-large" id="input" type="text" value="" placeholder="Search Food">
+                  <input class="input is-large" id="input" type="text" value="" placeholder="Search Food">
                 </p>
                 <p class="control">
-                <a class="button is-info is-large" id="foodButton">
-                  Search
-                </a>
+                  <a class="button is-info is-large" id="foodButton">
+                    Search
+                  </a>
                 </p>
               </div>
             </div>
@@ -159,9 +160,9 @@
                 <p></p>
                 <span>Quantity: </span><span id="quantity"></span>
                 <p class="control">
-                <a class="button is-info is-large" id="logButton">
-                  Log
-                </a>
+                  <a class="button is-info is-large" id="logButton">
+                    Log
+                  </a>
                 </p>
                 <div><img id='img2' height='140px' width='200px' src=''></div>
               </div>
@@ -169,88 +170,133 @@
             </div>
 
           </div>
-        <div class="foodSubmit hidden is-centered">
-          <p>Great Job! Your food has been submitted.</p>
-        </div>
+          <div class="foodSubmit hidden is-centered">
+            <p>Great Job! Your food has been submitted.</p>
+          </div>
 
-      </div>
+        </div>
 
         <div><img id='img2' height='140px' width='200px' src=''></div>
       </div>
     </div>
 
-    
+
 
     <div class="tab-pane is-active" id="pane-4" style="display: none;">
-      <div class="card large">
-        <div class="card-content">
-          <div>
-            <h1>Your Information</h1>
+
+      <div class="columns">
+        <div class="column">
+          <div class="card large">
+            <div class="card-content">
+              <div>
+                <h1>Exercise Log</h1>
+              </div>
+
+              <br>
+              <br>
+              <div class="columns">
+                <div class="column">
+                  Date
+                  <ul id="exercises">
+                    {{#each this.exercise}}
+                    <li>{{date}}</li>
+                    {{/each}}
+                  </ul>
+                </div>
+                <div class="column">
+                  Exercise
+                  <ul id="exercises">
+                    {{#each this.exercise}}
+                    <li>{{exercise_name}}</li>
+                    {{/each}}
+                  </ul>
+                </div>
+                <div class="column">
+                  Duration
+                  <ul id="exercises">
+                    {{#each this.exercise}}
+                    <li>{{duration}}</li>
+                    {{/each}}
+                  </ul>
+                </div>
+                <div class="column">
+                  Calories Burned
+                  <ul id="exercises">
+                    {{#each this.exercise}}
+                    <li>{{calories_burned}}</li>
+                    {{/each}}
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
-
-          <br>
-          <br>
-          <div class="columns">
-            <div class="column">
-              Date
-              <ul id="exercises">
-                {{#each this.exercise}}
-              <li>{{date}}</li>
-                {{/each}}
-              </ul>
-            </div>
-            <div class="column">
-              Exercise
-              <ul id="exercises">
-                {{#each this.exercise}}
-                <li>{{exercise_name}}</li>
-                {{/each}}
-              </ul>
-            </div>
-            <div class="column">
-              Duration
-              <ul id="exercises">
-                {{#each this.exercise}}
-                <li>{{duration}}</li>
-                {{/each}}
-              </ul>
-            </div>
-
-            <div class="column">
-              Calories Burned
-              <ul id="exercises">
-                {{#each this.exercise}}
-                <li>{{calories_burned}}</li>
-                {{/each}}
-              </ul>
-            </div>
-          </div>
-
-
-
-          <br>
-          <ul id="foods">
-            {{#each this.food}}
-            {{date}}
-            {{food_name}}
-            {{servings}}
-            {{calories}}
-            {{/each}}
-          </ul>
-
-
         </div>
+
+        {{!-- <div class="column"> --}}
+        {{!-- <div class="columns"> --}}
+
+        <div class="column">
+          <div class="card large">
+            <div class="card-content">
+              <div>
+                <h1>Food Log</h1>
+              </div>
+              <br>
+              <br>
+              <div class="columns">
+                <div class="column">
+                  Date
+                  <ul id="foods">
+                    {{#each this.food}}
+                    <li>{{date}}</li>
+                    {{/each}}
+                  </ul>
+                </div>
+                <div class="column">
+                  Food
+                  <ul id="foods">
+                    {{#each this.food}}
+                    <li>{{food_name}}</li>
+                    {{/each}}
+                  </ul>
+                </div>
+                <div class="column">
+                  Servings
+                  <ul id="foods">
+                    {{#each this.food}}
+                    <li>{{servings}}</li>
+                    {{/each}}
+                  </ul>
+                </div>
+                <div class="column">
+                  Calories
+                  <ul id="foods">
+                    {{#each this.food}}
+                    <li>{{calories}}</li>
+                    {{/each}}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {{!-- </div> --}}
+
+
+
+        {{!-- </div> --}}
       </div>
     </div>
-    <div ><a class="logout button" href="/logout">Logout</a></div>
+    <div><a class="logout button" href="/logout">Logout</a></div>
   </div>
 
   </div>
-  
+
   <footer class="nonfooter hero-foot">
     <div class="content has-text-centered">
       <p>
-        <strong style="color: #4d6a1b; padding-top:5px"> © 2020 Thomas Argent, Matt Dominick, Alexander Garcia, Sharon Yelverton 
+        <strong style="color: #4d6a1b; padding-top:5px"> © 2020 Thomas Argent, Matt Dominick, Alexander Garcia, Sharon
+          Yelverton
         </strong>
 
       </p>
