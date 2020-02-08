@@ -185,7 +185,7 @@
     <div class="tab-pane is-active" id="pane-4" style="display: none;">
 
       <div class="columns">
-        <div class="column">
+        <div class="column" style="min-width: 380px;">
           <div class="card large">
             <div class="card-content">
               <div>
@@ -194,7 +194,7 @@
 
               <br>
               <br>
-              <div class="columns">
+              <div class="columns" id="flexfix">
                 <div class="column">
                   Date
                   <ul id="exercises">
@@ -215,7 +215,7 @@
                   Duration
                   <ul id="exercises">
                     {{#each this.exercise}}
-                    <li>{{duration}}</li>
+                    <li>{{duration}} minutes</li>
                     {{/each}}
                   </ul>
                 </div>
@@ -234,7 +234,7 @@
 
        
 
-        <div class="column">
+        <div class="column" style="min-width: 380px;">
           <div class="card large">
             <div class="card-content">
               <div>
@@ -242,7 +242,7 @@
               </div>
               <br>
               <br>
-              <div class="columns">
+              <div class="columns" id="flexfix">
                 <div class="column">
                   Date
                   <ul id="foods">
