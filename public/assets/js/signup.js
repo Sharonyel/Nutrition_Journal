@@ -17,7 +17,7 @@ $(document).ready(function () {
     // console.log("clicked")
     event.preventDefault();
     
-    // 
+    console.log(gender) 
 
     enterUser({
       user_name: username.val().trim(),
@@ -30,9 +30,8 @@ $(document).ready(function () {
       gender: gender.val()
 
 
-    });
+    }); 
   }
-
   // A function for creating an author. Calls getAuthors upon completion
   function enterUser(userData) {
     // console.log(userData)
