@@ -7,40 +7,41 @@ function closeWeightChange() {
 }
 
 function saveWeight() {
-    weight = document.querySelector(".weightInput").value
+    // weight = document.querySelector(".weightInput").value
     // console.log(weight);
-
 }
 
-function updateWeight(weight) {
-    // console.log(weight);
-    // $.get('/api/users/:id', {
-    //     weight: weight
-    // })
-    //     .then(function () {
-    //         // window.location.replace("/welcome");
-    //         // If there's an error, log the error
-    //     })
-    //     .catch(function (err) {
-    //         errmess = err.responseText;
-    //         console.log(errmess);
-    //         getError();
-
-    //     });
-}
 
 $(document).ready(function () {
+    $.put = function(url, data, callback, type){
+ 
+        if ( $.isFunction(data) ){
+          type = type || callback,
+          callback = data,
+          data = {}
+        }
+       
+        return $.ajax({
+          url: url,
+          type: 'PUT',
+          success: callback,
+          data: data,
+          contentType: type
+        });
+      }
+
     var work = $(".weightBtn")
 
-    work.on("click", working);
-    function updateWeight2() {
+    work.on("click", updateWeight);
+    function grabWeight() {
         weight = document.querySelector(".weightInput").value
         console.log(weight);
+        // console.log(whatever);
     }
 
-    function working(weight) {
-        updateWeight2()
-        $.post('/api/users/:id', {
+    function updateWeight() {
+        grabWeight()
+        $.put('/api/users/:id', {
             weight: weight
         })
             .then(function () {

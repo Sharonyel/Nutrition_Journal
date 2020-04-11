@@ -23,8 +23,12 @@ module.exports = function (app) {
     });
   });
 
-  app.post('/api/users/:id', function (req, res) {
+  
+  app.put('/api/users/:id', function (req, res) {
     db.User.update({
+      // set: {
+      //   weight:req.params.weight
+      // },
       where: {
         id: req.params.id
       }
@@ -95,6 +99,7 @@ module.exports = function (app) {
         id: req.user.id,
         height: req.user.height,
         weight: req.user.weight,
+        gender: req.user.gender,
         age: req.user.age,
         first_name: req.user.first_name,
         last_name: req.user.last_name
