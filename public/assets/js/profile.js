@@ -31,18 +31,35 @@ $(document).ready(function () {
       }
 
     var work = $(".weightBtn")
-
+    // weight = document.querySelector(".weightInput").value
     work.on("click", updateWeight);
-    function grabWeight() {
-        weight = document.querySelector(".weightInput").value
-        console.log(weight);
-        // console.log(whatever);
-    }
+    // function grabWeight() {
+    //     weight = document.querySelector(".weightInput").value
+    //     // console.log(weight);
+    //     // console.log(whatever);
+    // }
 
-    function updateWeight() {
-        grabWeight()
-        $.put('/api/users/:id', {
-            weight: weight
+    // function updateWeight(user){
+    //     weight = document.querySelector(".weightInput").value
+    // $.ajax({
+    //     method: "PUT",
+    //     url: "/api/users",
+    //     data: user
+    //   })
+    //     .then(function() {
+    //     //   window.location.href = "/blog";
+    //     });
+    // }
+
+
+    function updateWeight(user) {
+        // grabWeight()
+        weight = document.querySelector(".weightInput").value
+        console.log(weight)
+        // console.log(user);
+        $.put('/api/users', {
+            data: user
+            
         })
             .then(function () {
                 // window.location.replace("/welcome");

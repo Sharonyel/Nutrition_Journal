@@ -24,13 +24,11 @@ module.exports = function (app) {
   });
 
   
-  app.put('/api/users/:id', function (req, res) {
-    db.User.update({
-      // set: {
-      //   weight:req.params.weight
-      // },
+  app.put('/api/users', function (req, res) {
+    db.User.update(req.body.weight,{
+      weight: req.body.weight,
       where: {
-        id: req.params.id
+        id: req.body.id
       }
     }).then(function (dbUser) {
       res.json(dbUser);
