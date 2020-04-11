@@ -23,6 +23,16 @@ module.exports = function (app) {
     });
   });
 
+  app.post('/api/users/:id', function (req, res) {
+    db.User.update({
+      where: {
+        id: req.params.id
+      }
+    }).then(function (dbUser) {
+      res.json(dbUser);
+    });
+  });
+
   app.post('/api/users', function (req, res) {
     // console.log("api/users", req.body)
     db.User.create(req.body)
