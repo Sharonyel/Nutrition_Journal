@@ -31,31 +31,29 @@ $(document).ready(function () {
       }
 
     var work = $(".weightBtn")
-    // weight = document.querySelector(".weightInput").value
     work.on("click", grabWeight);
 
     var weight= "";
     function grabWeight() {
+        var todo = $(this).parent().data("todo");
         weight = document.querySelector(".weightInput").value
         console.log(weight);
-        // console.log(whatever);
         updateWeight(weight)
     }
 
     function updateWeight(user){
-        // weight = document.querySelector(".weightInput").value
         console.log(weight+" 1")
     $.ajax({
         method: "PUT",
         url: "/api/users",
-        data: weight,
+        data: user
       })
         .then(function() {
         //   window.location.href = "/blog";
         });
     }
 
-
+////////////////////////////////////
     // function updateWeight(user) {
     //     // grabWeight()
     //     weight = document.querySelector(".weightInput").value
@@ -76,4 +74,6 @@ $(document).ready(function () {
 
     //         });
     // }
+
+     
 })
