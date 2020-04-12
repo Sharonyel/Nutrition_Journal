@@ -30,14 +30,14 @@
           <span class="tabText">Food</span>
         </a>
 
-          <a data-target="pane-3" id="3" class="navbar-item">
+          <a data-target="pane-3" id="3" class="navbar-item" onclick="Excersice ()">
             <span class="icon is-small"><i class="fas fa-walking" aria-hidden="true"></i></span>
             <span class="tabText">Excercise</span>
           </a>
 
         <hr class="navbar-divider">
 
-          <a data-target="pane-4" id="4" class="navbar-item">
+          <a data-target="pane-4" id="4" class="navbar-item" onclick="Logs()">
             <span class="icon is-small"><i class="fas fa-info-circle" aria-hidden="true"></i></span>
             <span class="tabText">Logs</span>
           </a>
@@ -49,7 +49,7 @@
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
-          <a href="/logout" class="button is-primary">
+          <a href="/logout" class="button is-primary" style="background-color: #192710;">
             Logout</a>
           </a>
 
@@ -91,7 +91,6 @@
           </div>
         </div>
       </div>
-      <div><a class="logout button" href="/logout">Logout</a></div>
     </div>
 
     <div  id="pane-2" class="tab-pane">
@@ -217,7 +216,7 @@
         </div>
 
       </div>
-      <div><a class="logout button" href="/logout">Logout</a></div>
+
     </div>
 
 
@@ -346,16 +345,45 @@
 </section>
 <!-- <script src="bulma.js"></script> -->
 <script>
+  var profile = document.getElementById('pane-1');
+  var food = document.getElementById('pane-2');
+  var exercise = document.getElementById('pane-3');
+  var logs = document.getElementById('pane-4');
 
   function foodDisplay (){
-    var food = document.getElementById('pane-2');
+   
+    event.preventDefault()
     food.classList.add("is-active")
+    profile.classList.remove("is-active");
+    exercise.classList.remove("is-active");
+    logs.classList.remove("is-active");
+
   }
  function Profile (){
-   var profile = document.getElementById('pane-1');
-   profile.classList.add("is active")
- }
 
+   event.preventDefault()
+   profile.classList.add("is-active");
+    food.classList.remove("is-active");
+    exercise.classList.remove("is-active");
+    logs.classList.remove("is-active");
+
+ }
+function Excersice (){
+
+  event.preventDefault()
+  exercise.classList.add("is-active");
+  food.classList.remove("is-active");
+  profile.classList.remove("is-active");
+  logs.classList.remove("is-active");
+}
+function Logs(){
+
+  event.preventDefault()
+  logs.classList.add("is-active");
+  food.classList.remove("is-active");
+  exercise.classList.remove("is-active");
+  profile.classList.remove("is-active");
+}
    
 </script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
