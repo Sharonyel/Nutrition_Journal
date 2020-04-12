@@ -47,8 +47,27 @@
                 <ul id="full-name"></ul>
                 <ul id="age">Age: </ul>
                 <ul id="height">Height: </ul>
-                <ul id="weight">Weight: </ul>
+               <ul id="weight">Weight: </ul><button class="button is-info" onclick="weightChange()">Update Weight</button>
+                <ul id="gender">Gender: </ul>
+                <ul id="bmi">BMI: </ul>
+                <ul id="dcn"></ul>
               </p>
+              <div class="modal">
+                <div class="modal-background"></div>
+                <div class="modal-card">
+                  <header class="modal-card-head">
+                    <p class="modal-card-title">Update Weight</p>
+                    <button onclick="closeWeightChange()" class="delete" aria-label="close"></button>
+                  </header>
+                  <section class="modal-card-body">
+                    <input type="number" value="150" class="weightInput" />
+                  </section>
+                  <footer class="modal-card-foot">
+                    <button type="submit" class="button weightBtn is-info">Save changes</button>
+                    <button onclick="closeWeightChange()" class="button">Cancel</button>
+                  </footer>
+                </div>
+              </div>
             </div>
             <div class="column">
               <h2 id="nutFact"><strong>Nutrition Quote</strong>
@@ -100,16 +119,16 @@
                 <div class="columns">
                   <div class="column">
                     <b>Duration</b>
-                <p id="workoutLength"></p>
-                </div>
-                <div class="column">
-                  <b>Workout</b>
-                <p id="workoutInfo"></p>
-                </div>
-                <div class="column">
-                  <b>Calories Burned</b>
-                <p id="calories"></p>
-                </div>
+                    <p id="workoutLength"></p>
+                  </div>
+                  <div class="column">
+                    <b>Workout</b>
+                    <p id="workoutInfo"></p>
+                  </div>
+                  <div class="column">
+                    <b>Calories Burned</b>
+                    <p id="calories"></p>
+                  </div>
                 </div>
                 <br>
 
@@ -126,7 +145,7 @@
 
 
             </div>
-    
+
 
           </div>
         </div>
@@ -179,7 +198,7 @@
                     Log
                   </a>
                 </p>
-                
+
               </div>
 
             </div>
@@ -249,7 +268,7 @@
           </div>
         </div>
 
-       
+
 
         <div class="column" style="min-width: 380px;">
           <div class="card large">
@@ -299,10 +318,10 @@
       </div>
     </div>
 
-    
+
   </div>
 
-  <div ><a class="logout button" href="/logout">Logout</a></div>
+  <div><a class="logout button" href="/logout">Logout</a></div>
 
   </div>
 
@@ -328,3 +347,4 @@
 <script type='text/javascript' src='assets/js/users.js'></script>
 <script src="assets/js/tabs.js"></script>
 <script src="assets/js/quotes.js"></script>
+<script src="assets/js/profile.js"></script>
