@@ -33,12 +33,15 @@ $(document).ready(function() {
 
      // console.log(data.gender)
 
-     let userBMR = 10*bmiWeight + c2bHeight*6.25 - 5*data.age + 5;
-     console.log(userBMR)
-
-     let userBMRf = 10*bmiWeight + c2bHeight*6.25 - 5*data.age -161;
-
-
+     if (data.gender === 'male') {
+      let userMale = 10*bmiWeight + c2bHeight*6.25 - 5*data.age + 5;
+        userBMR = userMale
+      }
+      else
+      {
+      let userFemale = 10*bmiWeight + c2bHeight*6.25 - 5*data.age -161;
+       userBMR = userFemale
+      }
 
 
 

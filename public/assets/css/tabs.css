@@ -333,9 +333,15 @@ ul {
     font-size: 10px;
 }
 /*MEDIA QUERIES*/
-@media screen and(max-width:760px) {
+@media (max-width: 720px) {
   #quoteButton,
   #addNew {
     display: block;
+  }
+  .tab-content {
+    padding: 10px!important;
+  }
+  input::placeholder {
+    font-size:20px;
   }
 }

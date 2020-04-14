@@ -49,7 +49,7 @@ $(document).ready(function () {
         data: user
       })
         .then(function() {
-        //   window.location.href = "/blog";
+            document.querySelector(".modal").classList.remove("is-active")
         });
     }
 
