@@ -31,8 +31,6 @@
             <span class="tabText">Excercise</span>
           </a>
 
-        <hr class="navbar-divider">
-
           <a data-target="pane-4" id="4" class="navbar-item" onclick="Logs()">
             <span class="icon is-small"><i class="fas fa-info-circle" aria-hidden="true"></i></span>
             <span class="tabText">Logs</span>
@@ -59,7 +57,9 @@
 
   <div>
 
-    <div  id="pane-1" class="tab-pane  is-active" >
+    <div class="tab-content">
+    <div  id="pane-1" class="tab-pane is-active">
+
       <div class="card large">
         <div class="card-content">
           <div class="columns">
@@ -69,8 +69,27 @@
                 <ul id="full-name"></ul>
                 <ul id="age">Age: </ul>
                 <ul id="height">Height: </ul>
-                <ul id="weight">Weight: </ul>
+               <ul id="weight">Weight: </ul><button class="button is-info" onclick="weightChange()">Update Weight</button>
+                <ul id="gender">Gender: </ul>
+                <ul id="bmi">BMI: </ul>
+                <ul id="dcn"></ul>
               </p>
+              <div class="modal">
+                <div class="modal-background"></div>
+                <div class="modal-card">
+                  <header class="modal-card-head">
+                    <p class="modal-card-title">Update Weight</p>
+                    <button onclick="closeWeightChange()" class="delete" aria-label="close"></button>
+                  </header>
+                  <section class="modal-card-body">
+                    <input type="number" value="150" class="weightInput" />
+                  </section>
+                  <footer class="modal-card-foot">
+                    <button type="submit" class="button weightBtn is-info">Save changes</button>
+                    <button onclick="closeWeightChange()" class="button">Cancel</button>
+                  </footer>
+                </div>
+              </div>
             </div>
             <div class="column">
               <h2 id="nutFact"><strong>Nutrition Quote</strong>
@@ -87,6 +106,7 @@
         </div>
       </div>
     </div>
+
 
     <div  id="pane-2" class="tab-pane">
       <div class="card large">
@@ -313,7 +333,9 @@
       </div>
     </div>
 
+</div>
   </div>
+
 
   </div>
 
@@ -381,3 +403,4 @@ function Logs(){
 <script type='text/javascript' src='assets/js/users.js'></script>
 <script src="assets/js/tabs.js"></script>
 <script src="assets/js/quotes.js"></script>
+<script src="assets/js/profile.js"></script>
