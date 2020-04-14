@@ -51,14 +51,14 @@ body {
 
 .tabs {
   
-  
-
     margin-bottom: -1px !important;
     position: relative;
     }
    
     .tab-pane {
     display: none;
+    margin-bottom: 10px;
+    height: auto;
     
     }
     .navbar-dropdown span {
@@ -71,6 +71,7 @@ body {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+   
     
     }
     .is-active {
@@ -110,6 +111,9 @@ body {
     .hero-body {
         background: url('../images/image2.jpg'); 
         background-size: cover;
+        margin: 0 auto;
+        width: 100%;
+        text-align: center;
     }
 
     span {
@@ -158,9 +162,10 @@ body {
 .tab-pane {
   display: none;
 }
-.tab-pane.is-active {
+.tab-pane .is-active {
   display: block;
   width: 50%;
+  margin-bottom: 20px;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -298,6 +303,10 @@ ul {
   font-style: italic;
   font-weight: 600;
   text-align: center;
+}
+.navbar {
+text-align: center;
+
 }
 /* td{
         width: 25px;
