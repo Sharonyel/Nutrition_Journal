@@ -9,7 +9,8 @@
     <title>Landing</title>
     <link href="https://fonts.googleapis.com/css?family=Questrial&amp;display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery.js"></script>
-    ​<link href="https://fonts.googleapis.com/css?family=Rock+Salt&display=swap" rel="stylesheet">
+    ​
+    <link href="https://fonts.googleapis.com/css?family=Rock+Salt&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/bulma@0.8.0/css/bulma.min.css">
     <!-- <link rel="stylesheet" type="css" href="/assets/css/style.css" /> -->
     <!-- <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script> -->
@@ -31,37 +32,42 @@
         margin-top: 100px;
         padding: 5px;
     }
-    @media ( max-width: 720px ) {
-    .title {
-    font-size: 50px;
-  }
- }
- #journal {
-     padding: 5px;
-     margin: 10px;
- }
+
+    @media (max-width: 720px) {
+        .title {
+            font-size: 40px;
+        }
+    }
+
+    #journal {
+        padding: 5px;
+        margin: 10px;
+    }
+
     .field.is-grouped {
         padding-top: 30px;
     }
 </style>
 
 <body>
-    <section class="section">
-        <div class="container is-fluid is-widescreen">
+    <section class="section columns">
+        <div class="container is-fluid is-widescreen column">
             <h1 class=" title is centered has-text-weight-bold is-italic">Nutrition</h1>
             <h1 class=" title is centered has-text-weight-bold" id="journal">Journal</h1>
         </div>​
     </section>
-  
+
     <div class="field is-grouped is-grouped-centered">
         <p class="control">
-            <button class="button is-large loginBtn"><a href="/login">Login</a>
-            </button>
+            <a href="/login">
+                <button class="button is-large loginBtn">Login</button>
+            </a>
         </p>
 
         <p class="control">
-            <button class="button is-large signupBtn"><a href="/signup">Sign Up</a>
-            </button>
+            <a href="/signup">
+                <button class="button is-large signupBtn">Sign Up</button>
+            </a>
         </p>
     </div>
 
