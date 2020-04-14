@@ -1,6 +1,6 @@
 <section class="hero is-info ">
   <div class="hero-body">
-    <div class="container welcomeUser">
+    <div style="width: auto; height:auto;margin:2px;" class="container welcomeUser">
       <h1 class="title" id="welcome" style="color: white">
         Welcome
       </h1>
@@ -8,36 +8,63 @@
       </h2>
     </div>
   </div>
-  <div class="tabs is-boxed is-centered main-menu" id="nav">
-    <ul>
-      <li data-target="pane-1" id="1" class="is-active">
-        <a>
+  <style>
+ 
+</style>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+
+
+    <div class="navbar-item has-dropdown is-hoverable">
+      <a style="color: black;" class="navbar-link">
+        Menu
+      </a>
+      <div class="navbar-dropdown">
+
+        <a data-target="pane-1" id="1" class="navbar-item" onclick="Profile ()">
           <span class="icon is-small"><i class="fas fa-user-circle" aria-hidden="true"></i></span>
-          <span class="tabText">Profile</span>
+          <span  class="tabText">Profile</span>
         </a>
-      </li>
-      <li data-target="pane-2" id="2" class="">
-        <a>
+
+        <a data-target="pane-2" id="2" class="navbar-item" onclick="foodDisplay()">
           <span class="icon is-small"><i class="fas fa-apple-alt" aria-hidden="true"></i></span>
           <span class="tabText">Food</span>
         </a>
-      </li>
-      <li data-target="pane-3" id="3" class="">
-        <a>
-          <span class="icon is-small"><i class="fas fa-walking" aria-hidden="true"></i></span>
-          <span class="tabText">Excercise</span>
-        </a>
-      </li>
-      <li data-target="pane-4" id="4" class="">
-        <a>
-          <span class="icon is-small"><i class="fas fa-info-circle" aria-hidden="true"></i></span>
-          <span class="tabText">Logs</span>
-        </a>
-      </li>
-    </ul>
-  </div>
-  <div class="tab-content">
-    <div class="tab-pane" id="pane-1" style="display: block;">
+
+          <a data-target="pane-3" id="3" class="navbar-item" onclick="Excersice ()">
+            <span class="icon is-small"><i class="fas fa-walking" aria-hidden="true"></i></span>
+            <span class="tabText">Excercise</span>
+          </a>
+
+        <hr class="navbar-divider">
+
+          <a data-target="pane-4" id="4" class="navbar-item" onclick="Logs()">
+            <span class="icon is-small"><i class="fas fa-info-circle" aria-hidden="true"></i></span>
+            <span class="tabText">Logs</span>
+          </a>
+
+      </div>
+    </div>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a href="/logout" class="button is-primary" style="background-color: #192710;">
+            Logout</a>
+          </a>
+
+        </div>
+      </div>
+    </div>
+
+  </nav>
+  <nav class="navbar-menu" role="navigation" aria-label="dropdown navigation">
+
+  </nav>
+
+  <div>
+
+    <div  id="pane-1" class="tab-pane">
       <div class="card large">
         <div class="card-content">
           <div class="columns">
@@ -83,12 +110,69 @@
           </div>
         </div>
       </div>
-      <div><a class="logout button" href="/logout">Logout</a></div>
     </div>
 
 
+    <div  id="pane-2" class="tab-pane">
+      <div class="card large">
+        <div class="card-content">
 
-    <div class="tab-pane" id="pane-3" style="display: none;">
+          <div class="columns">
+            <div class="column">
+              <h1 id="foodSearch">Search our database of foods</h1>
+              <br>
+              <div class="field is-grouped is-grouped-multiline">
+                <p class="control is-expanded">
+                  <input class="input is-large" id="input" type="text" value="" placeholder="Search Food">
+                </p>
+                <p class="control">
+                  <a class="button is-info is-large" id="foodButton">
+                    Search
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="foodSrchInfo hidden">
+            <div class="columns">
+              <div class="column" id="img1">
+
+              </div>
+              <div class="column">
+                <p></p>
+                <span>Name: </span><span id="name"></span>
+                <p></p>
+                <span>Calories: </span><span id="calories1"></span>
+                <p></p>
+                <span>Quantity: </span><span id="quantity"></span>
+                <br>
+                <br>
+                <div><img id='img2' height='140px' width='200px' src=''></div>
+                <br>
+                <p class="control">
+                  <a class="button is-info is-large" id="logButton">
+                    Log
+                  </a>
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+          <div class="foodSubmit hidden is-centered">
+            <p>Your food has been submitted.</p>
+          </div>
+
+        </div>
+
+        <div><img id='img2' height='140px' width='200px' src=''></div>
+      </div>
+
+    </div>
+
+    <div  id="pane-3" class="tab-pane">
       <div class="card large">
         <div class="card-content">
           <div class="columns">
@@ -151,74 +235,10 @@
         </div>
 
       </div>
-      <div><a class="logout button" href="/logout">Logout</a></div>
-    </div>
-
-
-
-    <div class="tab-pane is-active " id="pane-2" style="display: none;">
-      <div class="card large">
-        <div class="card-content">
-
-          <div class="columns">
-            <div class="column">
-              <h1 id="foodSearch">Search our database of foods</h1>
-              <br>
-              <div class="field is-grouped is-grouped-multiline">
-                <p class="control is-expanded">
-                  <input class="input is-large" id="input" type="text" value="" placeholder="Search Food">
-                </p>
-                <p class="control">
-                  <a class="button is-info is-large" id="foodButton">
-                    Search
-                  </a>
-                </p>
-              </div>
-            </div>
-          </div>
-          <br>
-          <div class="foodSrchInfo hidden">
-            <div class="columns">
-              <div class="column" id="img1">
-
-              </div>
-              <div class="column">
-                <p></p>
-                <span>Name: </span><span id="name"></span>
-                <p></p>
-                <span>Calories: </span><span id="calories1"></span>
-                <p></p>
-                <span>Quantity: </span><span id="quantity"></span>
-                <br>
-                <br>
-                <div><img id='img2' height='140px' width='200px' src=''></div>
-                <br>
-                <p class="control">
-                  <a class="button is-info is-large" id="logButton">
-                    Log
-                  </a>
-                </p>
-
-              </div>
-
-            </div>
-
-          </div>
-          <div class="foodSubmit hidden is-centered">
-            <p>Your food has been submitted.</p>
-          </div>
-
-        </div>
-
-        <div><img id='img2' height='140px' width='200px' src=''></div>
-      </div>
 
     </div>
 
-
-
-
-    <div class="tab-pane is-active" id="pane-4" style="display: none;">
+    <div  id="pane-4" class="tab-pane">
 
       <div class="columns">
         <div class="column" style="min-width: 380px;">
@@ -321,12 +341,11 @@
 
   </div>
 
-  <div><a class="logout button" href="/logout">Logout</a></div>
 
   </div>
 
-
   </div>
+
 
   <footer class="nonfooter hero-foot">
     <div class="content has-text-centered">
@@ -341,6 +360,48 @@
 
 </section>
 <!-- <script src="bulma.js"></script> -->
+<script>
+  var profile = document.getElementById('pane-1');
+  var food = document.getElementById('pane-2');
+  var exercise = document.getElementById('pane-3');
+  var logs = document.getElementById('pane-4');
+
+  function foodDisplay (){
+   
+    event.preventDefault()
+    food.classList.add("is-active")
+    profile.classList.remove("is-active");
+    exercise.classList.remove("is-active");
+    logs.classList.remove("is-active");
+
+  }
+ function Profile (){
+
+   event.preventDefault()
+   profile.classList.add("is-active");
+    food.classList.remove("is-active");
+    exercise.classList.remove("is-active");
+    logs.classList.remove("is-active");
+
+ }
+function Excersice (){
+
+  event.preventDefault()
+  exercise.classList.add("is-active");
+  food.classList.remove("is-active");
+  profile.classList.remove("is-active");
+  logs.classList.remove("is-active");
+}
+function Logs(){
+
+  event.preventDefault()
+  logs.classList.add("is-active");
+  food.classList.remove("is-active");
+  exercise.classList.remove("is-active");
+  profile.classList.remove("is-active");
+}
+   
+</script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 <script type="text/javascript" src='assets/js/nutritionLabel.js'></script>
 <script type='text/javascript' src='assets/js/nutrition.js'></script>

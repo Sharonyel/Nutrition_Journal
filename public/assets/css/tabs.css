@@ -23,6 +23,10 @@ body {
     text-align: center;
     width: 50%;
 }
+.navbar{
+  border: 1px solid #192710 ;
+  margin-bottom: 10px;
+}
 
 .signup{
     margin-top: 70px;
@@ -49,6 +53,10 @@ body {
     .tab-pane {
     display: none;
     
+    }
+    .navbar-dropdown span {
+      font-size: x-large;
+      padding: 5px;
     }
     .tab-pane.is-active {
     display: block;
