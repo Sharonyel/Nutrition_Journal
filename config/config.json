@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "johan123",
+    "password": "12345678",
 
     "database": "project2_db",
     "host": "127.0.0.1",
