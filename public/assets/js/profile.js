@@ -7,51 +7,73 @@ function closeWeightChange() {
 }
 
 function saveWeight() {
-    weight = document.querySelector(".weightInput").value
+    // weight = document.querySelector(".weightInput").value
     // console.log(weight);
-
 }
 
-function updateWeight(weight) {
-    // console.log(weight);
-    // $.get('/api/users/:id', {
-    //     weight: weight
-    // })
-    //     .then(function () {
-    //         // window.location.replace("/welcome");
-    //         // If there's an error, log the error
-    //     })
-    //     .catch(function (err) {
-    //         errmess = err.responseText;
-    //         console.log(errmess);
-    //         getError();
-
-    //     });
-}
 
 $(document).ready(function () {
-    var work = $(".weightBtn")
+    $.put = function(url, data, callback, type){
+ 
+        if ( $.isFunction(data) ){
+          type = type || callback,
+          callback = data,
+          data = {}
+        }
+       
+        return $.ajax({
+          url: url,
+          type: 'PUT',
+          success: callback,
+          data: data,
+          contentType: type
+        });
+      }
 
-    work.on("click", working);
-    function updateWeight2() {
+    var work = $(".weightBtn")
+    work.on("click", grabWeight);
+
+    var weight= "";
+    function grabWeight() {
+        var todo = $(this).parent().data("todo");
         weight = document.querySelector(".weightInput").value
         console.log(weight);
+        updateWeight(weight)
     }
 
-    function working(weight) {
-        updateWeight2()
-        $.post('/api/users/:id', {
-            weight: weight
-        })
-            .then(function () {
-                // window.location.replace("/welcome");
-                // If there's an error, log the error
-            })
-            .catch(function (err) {
-                errmess = err.responseText;
-                console.log(errmess);
-
-
-            });
+    function updateWeight(user){
+        console.log(weight+" 1")
+    $.ajax({
+        method: "PUT",
+        url: "/api/users",
+        data: user
+      })
+        .then(function() {
+            document.querySelector(".modal").classList.remove("is-active")
+        });
     }
+
+////////////////////////////////////
+    // function updateWeight(user) {
+    //     // grabWeight()
+    //     weight = document.querySelector(".weightInput").value
+    //     console.log(weight)
+    //     // console.log(user);
+    //     $.put('/api/users', {
+    //         data: user
+            
+    //     })
+    //         .then(function () {
+    //             // window.location.replace("/welcome");
+    //             // If there's an error, log the error
+    //         })
+    //         .catch(function (err) {
+    //             errmess = err.responseText;
+    //             console.log(errmess);
+
+
+    //         });
+    // }
+
+     
 })

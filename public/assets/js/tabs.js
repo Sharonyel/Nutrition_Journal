@@ -16,15 +16,15 @@ function toggleTab(selectedNav, targetId) {
     }
   });
 
-  var tabs = document.querySelectorAll(".tab-pane");
+  var navLi = document.querySelectorAll(".tab-pane");
 
-  tabs.forEach(function (tab) {
-    if (tab.id == targetId) {
-      tab.style.display = "block";
-    } else {
-      tab.style.display = "none";
-    }
-  });
+  // navLi.forEach(function (tab) {
+  //   if (tab.id == targetId) {
+  //     tab.style.display = "block";
+  //   } else {
+  //     tab.style.display = "none";
+  //   }
+  // });
 }
 
 // FOOD SEARCH FUNCTION//////////////////////////////

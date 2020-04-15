@@ -123,8 +123,13 @@ function foodAjax() {
         let sodium = response.foods[0].nf_sodium;
         serving = response.foods[0].serving_qty;
 
+
+
+        let rdcalnum = calories/10
+        let rdcalories = Math.floor(rdcalnum) * 10
+
         document.querySelector("#name").textContent = foodSearch;
-        document.querySelector("#calories1").textContent = calories;
+        document.querySelector("#calories1").textContent = rdcalories;
         document.querySelector("#quantity").textContent = serving;
         document.querySelector(".foodSubmit").classList.add('hidden');
 

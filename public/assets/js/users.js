@@ -77,3 +77,44 @@ $(document).ready(function() {
     // })
   });
   
+      $("#gender").text(`Gender: ${data.gender}`);
+    
+     // ********* BMI 
+
+     let bmiWeight = data.weight/2.20462262;
+     console.log(bmiWeight);
+
+     let meterHeight = data.height/39.3700797;
+     let bmiHeight = meterHeight * meterHeight;
+     console.log(bmiHeight)
+     // let userBMI = bmiWeight/bmiHeight;
+
+     let userBMI = bmiWeight/bmiHeight;
+     console.log(userBMI)
+
+     // ****** calories to burn
+
+     let c2bHeight = data.height * 2.54;
+
+
+     // console.log(data.gender)
+
+     if (data.gender === 'male') {
+      let userMale = 10*bmiWeight + c2bHeight*6.25 - 5*data.age + 5;
+        userBMR = userMale
+      }
+      else
+      {
+      let userFemale = 10*bmiWeight + c2bHeight*6.25 - 5*data.age -161;
+       userBMR = userFemale
+      }
+
+
+
+     $("#bmi").text(`BMI: ${userBMI.toFixed(0)}`)
+
+     $("#dcn").text(`Daily Calorie Needs: ${userBMR.toFixed(0)}`)
+
+
+
+

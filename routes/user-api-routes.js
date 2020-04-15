@@ -23,14 +23,17 @@ module.exports = function (app) {
     });
   });
 
-  app.post('/api/users/:id', function (req, res) {
+  
+  app.put('/api/users', function (req, res,) {
     db.User.update({
+      weight: req.body.weight},{
       where: {
-        id: req.params.id
+        id: req.body.id
       }
     }).then(function (dbUser) {
       res.json(dbUser);
     });
+    console.log(req.body.weight)
   });
 
   app.post('/api/users', function (req, res) {
@@ -95,6 +98,7 @@ module.exports = function (app) {
         id: req.user.id,
         height: req.user.height,
         weight: req.user.weight,
+        gender: req.user.gender,
         age: req.user.age,
         first_name: req.user.first_name,
         last_name: req.user.last_name
