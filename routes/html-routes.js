@@ -32,10 +32,10 @@ module.exports = function(app){
       where: query,
            
     }).then(function (data) {
-      var hbdata = {
-        food: data,
-        exercise: exercise
-      };
+      // var hbdata = {
+      //   food: data,
+      //   exercise: exercise
+      // };
           
       // res.render('welcome', hbdata);
       res.sendFile(path.join(__dirname, '../public/welcome.html'));
