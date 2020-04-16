@@ -8,7 +8,7 @@ Nutrition Log is an application where a user can sign up by creating an account 
 # Built With
  
 Passport, Express, BULMA, Heroku, Sequelize, Javascript, jQuery, MySql
-Handlebars, Nutritionix API
+, Nutritionix API
 
 How To Use:
 ---
