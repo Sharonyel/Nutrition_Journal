@@ -37,7 +37,8 @@ module.exports = function(app){
         exercise: exercise
       };
           
-      res.render('welcome', hbdata);
+      // res.render('welcome', hbdata);
+      res.sendFile(path.join(__dirname, '../public/welcome.html'));
     });
 
       
@@ -46,13 +47,13 @@ module.exports = function(app){
   });
 
   app.get('/signup', function(req, res) {
-    res.render('signup');
-    // res.sendFile(path.join(__dirname, "../public/signup.html"));
+    // res.render('signup');
+    res.sendFile(path.join(__dirname, '../public/signup.html'));
   });
 
   app.get('/login', function(req, res) {
-    res.render('login');
-    // res.sendFile(path.join(__dirname, "../public/login.html"));
+    // res.render('login');
+    res.sendFile(path.join(__dirname, '../public/login.html'));
   });
   app.get('/logout', function(req, res){
     req.logout();

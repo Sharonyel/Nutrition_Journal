@@ -48,6 +48,7 @@ $(document).ready(function() {
      $("#bmi").text(`BMI: ${userBMI.toFixed(0)}`)
 
      $("#dcn").text(`Daily Calorie Needs: ${userBMR.toFixed(0)}`)
+     $("#startcalorie").text(`${userBMR.toFixed(0)}`)
 
    });
 

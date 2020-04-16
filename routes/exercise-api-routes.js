@@ -43,4 +43,22 @@ module.exports = function (app) {
       res.json(dbExercise);
     });
   });
+
+  app.get('/api/exercise_data', function(req, res) {
+    if (!req.user) {
+      // The user is not logged in, send back an empty object
+      res.json({});
+    } else {
+      // Otherwise send back the user's email and id
+      // Sending back a password, even a hashed password, isn't a good idea
+      res.json({
+        duration: req.exercise.duration,
+        id: req.exercise.id,
+        exercise_name: req.exercise.exercise_name,
+        calories_burned: req.exercise.calories_burned,
+        date: req.exercise.date
+      });
+      
+    }
+  });
 };

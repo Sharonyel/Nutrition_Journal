@@ -1,7 +1,7 @@
 var express = require('express');
 var session = require('express-session');
 var passport = require('./config/passport');
-var exphbs = require('express-handlebars');
+// var exphbs = require('express-handlebars');
 
 
 var app = express();
@@ -9,19 +9,21 @@ var PORT = process.env.PORT || 8080;
 var db = require('./models');
 // Set Handlebars.
 
-app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
-app.set('view engine', 'handlebars');
+// app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
+app.use(express.static(__dirname + '/public'));
 
+app.set('view engine', 'public');
 // app.use(require('cookie-parser')());
-// app.use(require('body-parser').urlencoded({ extended: false }));
+app.use(require('body-parser').urlencoded({ extended: false }));
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static('./public'));
+
 
 app.use(session({ secret: 'keyboard cat', resave: true, saveUninitialized: true }));
 app.use(passport.initialize());
 app.use(passport.session());
+
 
 // Routes
 // =============================================================

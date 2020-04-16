@@ -1,3 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nutrition</title>
+    <link href="https://fonts.googleapis.com/css?family=Questrial&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.8.0/css/bulma.min.css">
+    <link rel="stylesheet" type="css" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-shims.min.css"
+        media="all">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Archivo+Black" />
+    <link rel="stylesheet" type="text/css" href="assets/css/nutritionLabel.css">
+    ​
+    <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all">
+    <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-font-face.min.css"
+        media="all">
+    <script src="https://kit.fontawesome.com/7dc3015a44.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./assets/css/tabs.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+</head>
+<body>
+  
+
 <section class="hero is-info ">
   <div class="hero-body">
     <div class="container welcomeUser">
@@ -69,7 +97,7 @@
                 <ul id="full-name"></ul>
                 <ul id="age">Age: </ul>
                 <ul id="height">Height: </ul>
-               <ul id="weight">Weight: </ul><button class="button is-info" onclick="weightChange()">Update Weight</button>
+               <ul id="weight">Weight: </ul>
                 <ul id="gender">Gender: </ul>
                 <ul id="bmi">BMI: </ul>
                 <ul id="dcn"></ul>
@@ -240,93 +268,40 @@
           <div class="card large">
             <div class="card-content">
               <div>
-                <h1>Exercise Log</h1>
+                <h1 style="text-align:center;font-size:35px;"><strong>Daily Log</strong></h1>
               </div>
 
               <br>
               <br>
               <div class="columns" id="flexfix">
                 <div class="column">
-                  Date
-                  <ul id="exercises">
-                    {{#each this.exercise}}
-                    <li>{{date}}</li>
-                    {{/each}}
-                  </ul>
+                  <div style="font-size:25px;"><strong>Posts</strong></div>
+                  <br>
+                  <p><strong>Daily Needs</strong></p>
+                  <br>
+                  <p style="text-decoration:underline"><strong>Exercises</strong></p>
+                 <p class="exercisePost"></p>
+                 <br>
+                 <p style="text-decoration:underline"><strong>Foods</strong></p>
+                 <p class="foodPost"></p>
                 </div>
-                <div class="column">
-                  Exercise
-                  <ul id="exercises">
-                    {{#each this.exercise}}
-                    <li>{{exercise_name}}</li>
-                    {{/each}}
-                  </ul>
+                <div class= column>
+                  <div style="font-size:25px;"><strong>Calories</strong></div>
+                  <br>
+                  <p id="startcalorie"></p>
+                  <p class="exerciseCalorie"></p>
+                  <p class="foodCalorie"></p>
+                  <div></div>
                 </div>
-                <div class="column">
-                  Duration
-                  <ul id="exercises">
-                    {{#each this.exercise}}
-                    <li>{{duration}} minutes</li>
-                    {{/each}}
-                  </ul>
+                <div>
+                 
                 </div>
-                <div class="column">
-                  Calories
-                  <ul id="exercises">
-                    {{#each this.exercise}}
-                    <li>{{calories_burned}}</li>
-                    {{/each}}
-                  </ul>
-                </div>
+          
               </div>
+              <div class="columns" >
+              <div class="column"><strong>Remaining Calories: </strong></div>
+              <div class="column" id="caloriesremaining"></div>
             </div>
-          </div>
-        </div>
-
-
-
-        <div class="column" style="min-width: 380px;">
-          <div class="card large">
-            <div class="card-content">
-              <div>
-                <h1>Food Log</h1>
-              </div>
-              <br>
-              <br>
-              <div class="columns" id="flexfix">
-                <div class="column">
-                  Date
-                  <ul id="foods">
-                    {{#each this.food}}
-                    <li>{{date}}</li>
-                    {{/each}}
-                  </ul>
-                </div>
-                <div class="column">
-                  Food
-                  <ul id="foods">
-                    {{#each this.food}}
-                    <li>{{food_name}}</li>
-                    {{/each}}
-                  </ul>
-                </div>
-                <div class="column">
-                  Servings
-                  <ul id="foods">
-                    {{#each this.food}}
-                    <li>{{servings}}</li>
-                    {{/each}}
-                  </ul>
-                </div>
-                <div class="column">
-                  Calories
-                  <ul id="foods">
-                    {{#each this.food}}
-                    <li>{{calories}}</li>
-                    {{/each}}
-                  </ul>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -404,3 +379,6 @@ function Logs(){
 <script src="assets/js/tabs.js"></script>
 <script src="assets/js/quotes.js"></script>
 <script src="assets/js/profile.js"></script>
+<script src="assets//js/posts.js"></script>
+</body>
+</html>

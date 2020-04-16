@@ -30,9 +30,15 @@ body {
     text-align: center;
     width: 100%;
 }
-.navbar{
+.navbar {
   border: 1px solid #192710 ;
   margin-bottom: 10px;
+  text-align: center;
+  font-size: x-large;
+}
+.navbar-item span{
+  width: 250px;
+  text-align: center;
 }
 
 .signup{
