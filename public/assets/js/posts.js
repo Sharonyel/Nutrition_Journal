@@ -85,5 +85,9 @@ $(document).ready(function () {
 function call() {
   value1 = $("#startcalorie").text();
   total = parseInt(value1) + exerciseCalorieCount - foodCalorieCount;
+  if(total<0){
+    $("#caloriesremaining").css("color", "red")
+  }
+  
   
 }
